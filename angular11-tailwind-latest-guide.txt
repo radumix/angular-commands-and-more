@@ -1,0 +1,76 @@
+ng new angular11-tailwindcss --style=scss
+cd angular11-tailwindcss
+npm i -D tailwindcss@latest postcss@latest autoprefixer@latest
+npm i -D postcss-import@12 postcss-loader@4 postcss-scss@3
+ng add ngx-build-plus
+
+webpack.config.js
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.scss$/,
+        loader: 'postcss-loader',
+        options: {
+          postcssOptions: {
+            ident: 'postcss',
+            syntax: 'postcss-scss',
+            plugins: [
+              require('postcss-import'),
+              require('tailwindcss'),
+              require('autoprefixer'),
+            ],
+          },
+        },
+      },
+    ],
+  },
+};
+
+
+{
+  ...
+  "architect": {
+    "build": {
+      "builder": "ngx-build-plus:browser",
+      "options": {
+        "extraWebpackConfig": "webpack.config.js", // add this line
+        ...
+      },
+      ...
+    },
+    "serve": {
+      "builder": "ngx-build-plus:dev-server",
+      "options": {
+        "extraWebpackConfig": "webpack.config.js", // add this line
+        ...
+      },
+      ...
+    },
+    "test": {
+      "builder": "ngx-build-plus:karma",
+      "options": {
+        "extraWebpackConfig": "webpack.config.js", // add this line
+        ...
+      },
+      ...
+    },
+  }
+}
+
+npx tailwindcss init
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+http-server dist/angular-tailwind-example -- run local prod
+
+------>>>> github guide
+git init
+git add .
+git commit -m "initial commit"
+git remote add origin remote repository URL
+git remote -v
+git push -f origin master
