@@ -1,1 +1,7 @@
 ng g m home --routing=true --module app.module && ng g c home
+
+	[ngClass]="{'zh': isZH, 'green-text': checkPercent(f.interestRate)}"
+  
+    checkPercent(f) {
+    return f.indexOf("%") !== -1
+  }
