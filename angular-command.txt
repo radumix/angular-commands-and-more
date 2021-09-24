@@ -7,3 +7,14 @@ ng g m home --routing=true --module app.module && ng g c home
    checkPercent(f) {
     return f.indexOf("%") !== -1
   }
+
+
+Angular exposes the following local variables:
+
+index
+first
+last
+even
+odd
+Share
+Impro
