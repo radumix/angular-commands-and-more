@@ -18,3 +18,10 @@ even
 odd
 Share
 Impro
+
+Here is how its done in Angular 6
+
+    <li *ngFor="let user of userObservable ; first as isFirst">
+       <span *ngIf="isFirst">default</span>
+    </li>
+Note the change from let first = first to first as isFirst
