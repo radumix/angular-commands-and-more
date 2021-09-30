@@ -1,0 +1,338 @@
+<p>home works!</p>
+<input #fileUploader type="file" multiple (change)="uploadDocument($event.target.files)"/>
+
+<button (click)="doMerge()">Merge</button>
+
+<!-- <img src="../../../../../../Documents/Application Form.pdf"> -->
+
+<pdf-viewer  [src]="data_pdf" ></pdf-viewer>
+
+
+
+import { Component, OnInit, EventEmitter  } from '@angular/core';
+import { jsPDF } from "jspdf";
+//import { PDFDocument, StandardFonts, rgb } from 'pdf-lib'
+//  const PDFMerger = require('pdf-merger-js');
+//  var merger = new PDFMerger();
+//declare var require: any
+ const merge = require('easy-pdf-merge');
+
+ //var sunPDFMerger = require('sun-pdf-merger');
+
+//var merge = require('easy-pdf-merge');
+
+//declare function doMerge(src, dest, opts, callback): any;
+
+const { PDFDocument } = require('pdf-lib');
+//var fs = require('file-system');
+
+ //var exec = require('child_process').exec;
+
+// var path = require('path');
+
+// var fs = require('file-system');
+
+//const mergePDFs = require('merge-multiple-pdfs');
+
+const autoMerger = require('auto-pdf-merger');
+const concatString = require('strconcatfunctions');
+
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
+})
+export class HomeComponent implements OnInit {
+ base64Array = [];
+ pdfBytes:any;
+ data_pdf: string;
+  constructor() { }
+
+  ngOnInit(): void {
+
+    
+  
+  //   let res = doMerge(['Application Form.pdf', 'FNA.pdf'],'File Ouput1.pdf', false, function(err){
+
+  //     if(err)
+  //     return console.log(err);
+
+  //     console.log('Successfully merge na!');
+
+  // });
+
+  // console.log('bool', res);
+
+//node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\webpack-configs\browser.js
+//node: { crypto: true, stream: true, fs: "empty", net: "empty", tls: "empty" },
+  }
+
+// mergeThis(src, dest, opts, callback) {
+//   var defaultOpts = {
+//     maxBuffer: 1024 * 500,
+//     // 500kb
+//     maxHeap: '' // for setting JVM heap limits
+
+//   }; // this will help to fix the old code using the function without opts
+
+//   if (!callback) {
+//     callback = opts;
+//     opts = defaultOpts;
+//   } // if opts is null, we will set the default options
+
+
+//   if (!opts) {
+//     opts = defaultOpts;
+//   }
+
+//   var dirPathArr = __dirname.split(path.sep);
+
+//   dirPathArr.pop();
+//   dirPathArr.pop();
+//   dirPathArr.push('jar');
+//   dirPathArr.push('pdfbox.jar');
+//   var jarPath = dirPathArr.join(path.sep);
+//   var command = ["java", "-jar", jarPath, "PDFMerger"];
+//   var maxHeapOpt = opts.maxHeap ? '-Xmx' + opts.maxHeap : null;
+
+//   if (maxHeapOpt) {
+//     command.splice(2, 0, maxHeapOpt);
+//   }
+
+//   this.checkSrc(src, function (err, norm_src) {
+//     if (err) {
+//       return callback(err);
+//     }
+
+//     command = command.concat(norm_src);
+//     command.push("\"".concat(dest, "\""));
+//     delete opts.maxHeap;
+//     var child = exec(command.join(' '), opts, function (err, stdout, stderr) {
+//       if (err) {
+//         return callback(err);
+//       }
+
+//       callback(null);
+//     });
+
+//     child.on('error', function (err) {
+//       return callback("Execution problem. ".concat(err));
+//     });
+//   });
+// };  
+
+  
+checkSrc(src, callback) {
+  if (!Array.isArray(src)) {
+    return callback('Source is not an Array');
+  } else if (src.length < 2) {
+    return callback('There must be atleast 2 input files');
+  }
+
+  var norm_src = [];
+
+  for (var i = 0; i < src.length; i++) {
+    if (typeof src[i] === 'string') {
+      norm_src.push("\"".concat(src[i], "\""));
+      console.log('norm', norm_src);
+    } else {
+      return callback("Source : ".concat(src[i], " + , is not a file name"));
+    }
+  }
+
+  callback(null, norm_src);
+}
+
+async mergeAllPDFs(urls) {
+   
+
+  const pdfDoc = await PDFDocument.create();
+  const numDocs = urls.length;
+
+
+  
+  for(var i = 0; i < numDocs; i++) {
+    console.log('rad', urls[i]);
+      const donorPdfBytes = await fetch(urls[i]).then(res => res.arrayBuffer());
+      const result = this._base64ToArrayBuffer2(this.base64Array[i].replace(/^[^,]+,/, ''));
+      console.log(result, 'bytes');
+      const donorPdfDoc = await PDFDocument.load(result);
+      const docLength = donorPdfDoc.getPageCount();
+      for(var k = 0; k < docLength; k++) {
+          const [donorPage] = await pdfDoc.copyPages(donorPdfDoc, [k]);
+          //console.log("Doc " + i+ ", page " + k);
+          pdfDoc.addPage(donorPage);
+      }
+  }
+
+  const pdfDataUri = await pdfDoc.saveAsBase64({ dataUri: true });
+ // console.log(pdfDataUri);
+
+  this.data_pdf = pdfDataUri;
+  //strconcatfunctions
+  // strip off the first part to the first comma "data:image/png;base64,iVBORw0K..."
+  //this.data_pdf = pdfDataUri.substring(pdfDataUri.indexOf(',')+1);
+}
+
+  async doMerge(){
+
+    // const result = this._base64ToArrayBuffer2(this.base64Array[0].replace(/^[^,]+,/, ''));
+    // console.log(result, 'dumix');
+    
+    let res = await autoMerger.addBase64Array(this.base64Array);
+    this.data_pdf = res;
+    console.log(res);
+
+  //   this.mergeAllPDFs([
+  //     "https://s3-us-west-2.amazonaws.com/bytescout-com/files/demo-files/cloud-api/pdf-merge/sample1.pdf",
+  //     "https://s3-us-west-2.amazonaws.com/bytescout-com/files/demo-files/cloud-api/pdf-merge/sample2.pdf"
+  // ]);
+ 
+
+  //   merge(['Application Form.pdf', 'FNA.pdf'], 'File Ouput.pdf', function (err) {
+  //     if (err) {
+  //         return console.log(err)
+  //     }
+  //     console.log('Successfully merged!')
+  // });
+
+    // let res = await sunPDFMerger.mergePDF(['Application Form.pdf', 'FNA.pdf']);
+    // console.log(res);
+
+
+//   this.goDo('rad', function (err) {
+//     if (err) {
+//         return console.log(err, 'ers')
+//     }
+//     console.log('Successfully merged!')
+// })
+    
+  
+
+  //   this.mergeThis(['Application Form.pdf', 'FNA.pdf'], 'File Ouput.pdf', false, function (err) {
+  //     if (err) {
+  //         return console.log(err, 'ers')
+  //     }
+  //     console.log('Successfully merged!')
+  // });
+
+
+  }
+
+  // goDo(data, callback) {
+  //   var cmd = 'ls'
+  //   exec(cmd, function (err, stdout, stderr) {
+  //     // call extraArgs with the "data" param and a callback as well
+  //     this.extraArgs(err, stdout, stderr, data, callback) 
+  //   })
+  // }
+
+
+
+  
+
+
+
+  async loadDown(){
+    // merger.add('../../assets/FNA.pdf');  //merge all pages. parameter is the path to file and filename.
+    // merger.add('../../assets/Application Form.pdf', [2]); // merge only page 2
+    // await merger.save('merged.pdf');
+
+   
+
+  }
+
+  _base64ToArrayBuffer2(base64) {
+    var binary_string = window.atob(base64);
+    var len = binary_string.length;
+    var bytes = new Uint8Array(len);
+    for (var i = 0; i < len; i++) {
+        bytes[i] = binary_string.charCodeAt(i);
+    }
+    return bytes.buffer;
+}
+  
+   _base64ToArrayBuffer(base64) {
+    var binary_string = window.atob(base64);
+    var len = binary_string.length;
+    var bytes = new Uint8Array(len);
+    for (var i = 0; i < len; i++) {
+        bytes[i] = binary_string.charCodeAt(i);
+    }
+    return bytes.buffer;
+   }
+
+  base64ToArrayBuffer(data) {
+    var input = data.substring(data.indexOf(',') + 1);
+    var binaryString = window.atob(input);
+    var binaryLen = binaryString.length;
+    var bytes = new Uint8Array(binaryLen);
+    for (var i = 0; i < binaryLen; i++) {
+      var ascii = binaryString.charCodeAt(i);
+      bytes[i] = ascii;
+    }
+    return bytes;
+  };
+
+  
+  async uploadDocument(files: File[]) {
+    for (let i = 0; i < files.length; i++) {
+      const fileType = files[i].type.substr(files[i].type.lastIndexOf('/') + 1);
+      console.log(fileType);
+      if (fileType.toLowerCase() !== 'pdf') {
+        continue;
+      }
+
+      //console.log(`Uploaded file name: ${files[i].name}`);
+
+      const fileSize = files[i].size;
+      let size;
+      if (fileSize < 1000) {
+        size = `${fileSize} Bytes`;
+      } else if (fileSize < 1000 * 1000) {
+        size = `${fileSize / 1000} KB`;
+      } else if (fileSize < 1000 * 1000 * 1000) {
+        size = `${fileSize / 1000 / 1000} MB`;
+      } else {
+        size = `${fileSize / 1000 / 1000 / 1000} GB`;
+      }
+
+      const base64Value = await this.getbase64(files[i]) as string;
+    //  this.uploadDocumentsList.push(new UploadedDocuments(files[i].name, size));
+     console.log('dumix', base64Value);
+
+      //const lastIndex = this.uploadDocumentsList.length - 1;
+      const body = {
+        documentTitle: files[i].name,
+        base64Value: encodeURIComponent(base64Value.replace('data:application/pdf;base64,', ''))
+      };
+      const pdfSrc_ = base64Value;
+      this.base64Array.push(pdfSrc_);
+
+      //console.log(pdfSrc_);
+
+      // const doc = new jsPDF();
+      // doc.save(pdfSrc_);
+
+      // this.fileService.uploadDocument(body, {
+      //   'content-type': 'application/json'
+      // }).subscribe((res) => {
+      //   console.log(res);
+      //   this.uploadDocumentsList[lastIndex].setDocumentId(res.results.data.body.documentId);
+      // });
+    }
+  }
+
+  getbase64(base64file: File) {
+    const reader = new FileReader();
+    reader.onprogress = (event) => { };
+
+    reader.readAsDataURL(base64file);
+    return new Promise((resolve, reject) => {
+      reader.onload = () => {
+        resolve(reader.result);
+      };
+    });
+  }
+
+}
