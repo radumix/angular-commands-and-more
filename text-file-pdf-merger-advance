@@ -12,6 +12,8 @@ html side
 
 ts side 
 -------------------------
+npm install strconcatfunctions
+
 import { Component, OnInit, EventEmitter  } from '@angular/core';
 import { jsPDF } from "jspdf";
 //import { PDFDocument, StandardFonts, rgb } from 'pdf-lib'
