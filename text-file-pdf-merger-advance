@@ -1,3 +1,5 @@
+html side
+----------------------
 <p>home works!</p>
 <input #fileUploader type="file" multiple (change)="uploadDocument($event.target.files)"/>
 
@@ -8,7 +10,8 @@
 <pdf-viewer  [src]="data_pdf" ></pdf-viewer>
 
 
-
+ts side 
+-------------------------
 import { Component, OnInit, EventEmitter  } from '@angular/core';
 import { jsPDF } from "jspdf";
 //import { PDFDocument, StandardFonts, rgb } from 'pdf-lib'
