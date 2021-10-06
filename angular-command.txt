@@ -1,3 +1,10 @@
+limit display on ngFor iteration
+ *ngFor="let item of data | slice:0:3; let i=index"
+ 
+ using integer condition in dynamic ngClass
+ [ngClass]="{'modal-content-extended': data.length > 2}"
+ 
+create component with module
 ng g m home --routing=true --module app.module && ng g c home
 
    html dynamic class
