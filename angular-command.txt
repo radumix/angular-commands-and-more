@@ -34,3 +34,8 @@ Here is how its done in Angular 6
 Note the change from let first = first to first as isFirst
 
  (itemTapCallback)="viewLeadDetails($event, data)" ---ionic command
+ 
+ 
+ i18 translate passing paramter:
+ UI - {{ 'download-client-documents.all-policies-from-all-consultants' | translate: {value: '150'} }}
+ JS -  "all-policies-from-all-consultants" : "All policies from all {{value}} consultants",
