@@ -39,3 +39,8 @@ Note the change from let first = first to first as isFirst
  i18 translate passing paramter:
  UI - {{ 'download-client-documents.all-policies-from-all-consultants' | translate: {value: '150'} }}
  JS -  "all-policies-from-all-consultants" : "All policies from all {{value}} consultants",
+ 
+ 
+ i18 translate ternary
+ {{ (!showMoreAddInfo && additionalInfo.length > 3 ? 'leads.show-more' : 'leads.show-less' ) | translate}}
+ 
