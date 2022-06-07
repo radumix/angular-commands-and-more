@@ -1,0 +1,27 @@
+mkdir MyCoolModule
+cd MyCoolModule
+npm init
+npm login
+npm publish
+
+
+Test your module
+Create another directory:
+
+mkdir TestMyModule
+Switch into the directory:
+
+cd TestMyModule
+Create your test script - I called mine test.js:
+
+var mymodule = require('mycoolmodule')
+mymodule.printMsg();
+Create the test node project:
+
+npm init
+Install your created module:
+
+npm install mycoolmodule
+Execute the test script:
+
+node test.js
