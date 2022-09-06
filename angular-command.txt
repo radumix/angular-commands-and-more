@@ -1,3 +1,12 @@
+angular 14 new command
+
+to buil prod:
+ng build --configuration production
+
+to check version
+ng v
+
+
 limit display on ngFor iteration
  *ngFor="let item of data | slice:0:3; let i=index"
  
