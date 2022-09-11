@@ -53,3 +53,13 @@ Note the change from let first = first to first as isFirst
  i18 translate ternary
  {{ (!showMoreAddInfo && additionalInfo.length > 3 ? 'leads.show-more' : 'leads.show-less' ) | translate}}
  
+ 
+it sounds like you want to use a transparent background, in which case you could try using the rgba() function:
+rgba(R, G, B, A)
+R (red), G (green), and B (blue) can be either <integer>s or <percentage>s, where the number 255 corresponds to 100%. A (alpha) can be a <number> between 0 and 1, or a <percentage>, where the number 1 corresponds to 100% (full opacity).
+RGBa example
+background: rgba(51, 170, 51, .1)    /*  10% opaque green */ 
+background: rgba(51, 170, 51, .4)    /*  40% opaque green */ 
+background: rgba(51, 170, 51, .7)    /*  70% opaque green */ 
+
+ 
