@@ -4,3 +4,7 @@ select comlumns only
 select *
 from INFORMATION_SCHEMA.COLUMNS
 where TABLE_NAME='tbl_credential'
+
+add column using script
+ALTER TABLE tbl_credential
+ADD is_updated bit;
