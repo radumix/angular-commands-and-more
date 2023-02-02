@@ -1,0 +1,6 @@
+
+
+select comlumns only
+select *
+from INFORMATION_SCHEMA.COLUMNS
+where TABLE_NAME='tbl_credential'
