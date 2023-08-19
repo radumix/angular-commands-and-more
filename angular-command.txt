@@ -1,5 +1,8 @@
 angular 14 new command
 
+create css and .ts only component:
+ng generate component home --standalone --inline-template --skip-tests
+
 to buil prod:
 ng build --configuration production
 
