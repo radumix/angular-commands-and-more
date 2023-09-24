@@ -5,3 +5,21 @@ git commit -m "initial commit"
 git remote add origin remote repository URL
 git remote -v
 git push -f origin master
+
+git clone
+git status
+git fetch
+git checkout
+git branch -a
+git branch --list
+
+
+create branch: git branch alpha-branch
+checkout to branch: git checkout alpha-branch
+push branch to remote url: git push -u <remote> <branch-name>
+create branch and checkout to branch created: git checkout -b beta
+display all branches: git branch -a
+delete branch: git branch -d <branch-name>
+stage changes: git add -A
+commit message: git commit -m "commit message"
+push commit: git push <remote> <branch-name>
