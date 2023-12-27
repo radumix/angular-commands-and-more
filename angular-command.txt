@@ -20,7 +20,8 @@ limit display on ngFor iteration
  [ngClass]="{'modal-content-extended': data.length > 2}"
  
 create component with module
-ng g m home --routing=true --module app.module && ng g c home
+ng g m home --routing=true --module app.module && ng g c home (for angular 14 below)
+ng generate module customers --route customers --module app.module (for angular 17 above)
 
    html dynamic class
    ngClass]="{'zh': isZH, 'green-text': checkPercent(f.interestRate)}"
