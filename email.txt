@@ -10,8 +10,8 @@ namespace TesterEmail.Controllers
     [ApiController]
     public class DataController : ControllerBase
     {
-        private readonly string senderEmail = "mudardastam@gmail.com";
-        private readonly string senderPassword = "jhkb sykb cjly fxqi";
+        private readonly string senderEmail = "xxx@gmail.com";
+        private readonly string senderPassword = "xxx";
 
         [HttpPost("send")]
         public IActionResult SendNotif([FromBody] Model model)
