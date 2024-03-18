@@ -52,3 +52,6 @@ namespace TesterEmail.Controllers
 
     }
 }
+
+//link
+//https://www.bing.com/videos/riverview/relatedvideo?q=firebase+automatic+email+notification+configuration&&view=riverview&mmscn=mtsc&mid=B2FBCDAACB94D8E31988B2FBCDAACB94D8E31988&&aps=291&FORM=VMSOVR
