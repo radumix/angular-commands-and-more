@@ -14,3 +14,69 @@ run the playwright test
 npx playwright test
 npx playwright test --headed
 npx playwright show-report
+
+
+//@ts-check
+const { test, expect } = require('@playwright/test');
+const { executeSQL } = require('./db'); // Import the SQL execution function
+
+test('example 101', async ({ page }) => {
+  await page.goto('https://playwright.dev/');
+
+  // Expect a title "to contain" a substring.
+  await expect(page).toHaveTitle(/Playwright/);
+  
+  // Call the executeSQL function here
+  const dbResult = await executeSQL();
+  console.log('Database result:', dbResult); // This will print the SQL query result
+
+  // Optionally, you can use the dbResult to validate data or make assertions in the test
+  expect(dbResult).toBeTruthy(); // Example assertion
+});
+
+test('get started link', async ({ page }) => {
+  await page.goto('https://playwright.dev/');
+
+  // Click the get started link.
+  await page.getByRole('link', { name: 'Get started' }).click();
+
+  // Expects page to have a heading with the name of Installation.
+  await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
+  
+  // Call the executeSQL function here as well
+  const dbResult = await executeSQL();
+  console.log('Database result for get started test:', dbResult);
+  expect(dbResult).toBeTruthy(); // Example assertion
+});
+
+
+
+
+// db.js
+const { Client } = require('pg'); // or mysql2, sqlite3, etc.
+
+async function executeSQL() {
+  const client = new Client({
+    user: 'your-username',
+    host: 'localhost',
+    database: 'your-database',
+    password: 'your-password',
+    port: 5432, // or the relevant port for your DB
+  });
+
+  await client.connect();
+  
+  try {
+    // Your SQL query
+    const result = await client.query('SELECT * FROM your_table');
+    console.log('Query result:', result.rows); // or result.rows for SELECT queries
+    return result.rows;
+  } catch (err) {
+    console.error('Error executing SQL:', err);
+  } finally {
+    await client.end();
+  }
+}
+
+module.exports = { executeSQL };
+
