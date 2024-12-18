@@ -1,0 +1,1162 @@
+html inspect element:
+
+
+<kendo-grid id="grdTaskList" filterable="menu" class="w-100 grd-task-checkbox k-grid ng-star-inserted"
+    dir="ltr"><!----><!----><!----><!---->
+    <div role="grid" class="k-grid-aria-root" aria-label="Data table" aria-rowcount="33" aria-colcount="8">
+        <div role="presentation" class="k-grid-header ng-star-inserted" style="padding: 0px 23px 0px 0px;">
+            <!---->
+            <div role="presentation" data-scrollable="" class="k-grid-header-wrap">
+                <table role="presentation">
+                    <colgroup kendogridcolgroup="" role="presentation">
+                        <!----><!---->
+                        <col class="ng-star-inserted" style="width: 64px;">
+                        <col style="width: 115px;" class="ng-star-inserted">
+                        <col style="width: 158px;" class="ng-star-inserted">
+                        <col style="width: 130px;" class="ng-star-inserted">
+                        <col style="width: 210px;" class="ng-star-inserted">
+                        <col style="width: 176px;" class="ng-star-inserted">
+                        <col style="width: 168px;" class="ng-star-inserted">
+                        <col style="width: 124px;" class="ng-star-inserted">
+                        <!----><!---->
+                    </colgroup>
+                    <thead kendogridheader="" role="presentation">
+                        <tr kendogridlogicalrow="" role="row" aria-rowindex="1" class="ng-star-inserted">
+                            <!----><!---->
+                            <th kendogridlogicalcell="" role="columnheader" aria-selected="false" kendodroptarget=""
+                                kendodraggable="" kendodraggablecolumn=""
+                                class="k-header k-touch-action-none text-center k-grid-draggable-header ng-star-inserted"
+                                rowspan="1" colspan="1" aria-colindex="1">
+                                <span class="k-cell-inner ng-star-inserted"><span class="k-link"><label
+                                            class="c-checkbox ng-star-inserted"><input id="chkLicenseListGridSelectAll"
+                                                type="checkbox" kendogridselectallcheckbox=""><span
+                                                class="c-checkbox-box"><svg width="11px" height="8px" viewBox="0 0 11 8"
+                                                    version="1.1">
+                                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                        <g transform="translate(-4.000000, -6.000000)" fill="#24BFC7"
+                                                            class="set-s-fill">
+                                                            <path
+                                                                d="M14.5983382,7.88310204 L8.88432353,13.6497959 C8.46114706,14.076898 7.77477941,14.076898 7.35127941,13.6497959 L4.40166176,10.6724898 C3.97832353,10.2453878 3.97832353,9.55265306 4.40166176,9.12538776 C4.825,8.69812245 5.51136765,8.69812245 5.93454412,9.12522449 L8.11804412,11.3289796 L13.0652941,6.33583673 C13.4886324,5.90857143 14.175,5.90889796 14.5981765,6.33583673 C15.0215147,6.76310204 15.0215147,7.45567347 14.5983382,7.88310204 Z">
+                                                            </path>
+                                                        </g>
+                                                    </g>
+                                                </svg></span></label><!----><!----></span><!----><!----></span><!----><!----><!----><!----><span
+                                    kendogridcolumnhandle="" kendodraggable="" class="k-column-resizer ng-star-inserted"
+                                    style="display: block; right: 0px;"></span><!---->
+                            </th>
+                            <!----><!----><!---->
+                            <th kendogridlogicalcell="" role="columnheader" aria-selected="false" kendodroptarget=""
+                                kendodraggable="" kendodraggablecolumn=""
+                                class="k-header k-filterable k-touch-action-none text-center k-grid-draggable-header ng-star-inserted"
+                                rowspan="1" colspan="1" aria-colindex="2">
+                                <span class="k-cell-inner ng-star-inserted"><span class="k-link"><!----><span
+                                            class="k-column-title ng-star-inserted">Type</span><!----><!----></span><!----><kendo-grid-column-menu
+                                        class="ng-star-inserted"><a href="#"
+                                            class="k-grid-header-menu k-grid-column-menu" tabindex="0"
+                                            title="Type Column Menu"><span
+                                                class="k-icon k-i-more-vertical"></span></a><!----><!----></kendo-grid-column-menu><!----></span><!----><!----><!----><!----><span
+                                    kendogridcolumnhandle="" kendodraggable="" class="k-column-resizer ng-star-inserted"
+                                    style="display: block; right: 0px;"></span><!---->
+                            </th>
+                            <!----><!----><!---->
+                            <th kendogridlogicalcell="" role="columnheader" aria-selected="false" kendodroptarget=""
+                                kendodraggable="" kendodraggablecolumn=""
+                                class="k-header k-filterable k-touch-action-none k-grid-draggable-header ng-star-inserted"
+                                rowspan="1" colspan="1" aria-colindex="3">
+                                <!----><span class="k-cell-inner ng-star-inserted"><span class="k-link"><!----><span
+                                            class="k-column-title ng-star-inserted">Name</span><!----><!----><span
+                                            role="note" aria-label="Sortable"></span><!----></span><span role="status"
+                                        class="k-sort-status"
+                                        style="position: absolute; left: -10000px;"></span><!----><kendo-grid-column-menu
+                                        class="ng-star-inserted"><a href="#"
+                                            class="k-grid-header-menu k-grid-column-menu" tabindex="0"
+                                            title="Name Column Menu"><span
+                                                class="k-icon k-i-more-vertical"></span></a><!----><!----></kendo-grid-column-menu><!----></span><!----><!----><!----><span
+                                    kendogridcolumnhandle="" kendodraggable="" class="k-column-resizer ng-star-inserted"
+                                    style="display: block; right: 0px;"></span><!---->
+                            </th>
+                            <!----><!----><!---->
+                            <th kendogridlogicalcell="" role="columnheader" aria-selected="false" kendodroptarget=""
+                                kendodraggable="" kendodraggablecolumn=""
+                                class="k-header k-filterable k-touch-action-none k-grid-draggable-header ng-star-inserted"
+                                rowspan="1" colspan="1" aria-colindex="4">
+                                <span class="k-cell-inner ng-star-inserted"><span class="k-link"><!----><span
+                                            class="k-column-title ng-star-inserted">Due
+                                            Status</span><!----><!----></span><!----><kendo-grid-column-menu
+                                        class="ng-star-inserted"><a href="#"
+                                            class="k-grid-header-menu k-grid-column-menu" tabindex="0"
+                                            title="Due Status Column Menu"><span
+                                                class="k-icon k-i-more-vertical"></span></a><!----><!----></kendo-grid-column-menu><!----></span><!----><!----><!----><!----><span
+                                    kendogridcolumnhandle="" kendodraggable="" class="k-column-resizer ng-star-inserted"
+                                    style="display: block; right: 0px;"></span><!---->
+                            </th>
+                            <!----><!----><!---->
+                            <th kendogridlogicalcell="" role="columnheader" aria-selected="false" kendodroptarget=""
+                                kendodraggable="" kendodraggablecolumn=""
+                                class="k-header k-filterable k-touch-action-none k-grid-draggable-header ng-star-inserted"
+                                rowspan="1" colspan="1" aria-colindex="5">
+                                <!----><span class="k-cell-inner ng-star-inserted"><span class="k-link"><!----><span
+                                            class="k-column-title ng-star-inserted">Document</span><!----><!----><span
+                                            role="note" aria-label="Sortable"></span><!----></span><span role="status"
+                                        class="k-sort-status"
+                                        style="position: absolute; left: -10000px;"></span><!----><kendo-grid-column-menu
+                                        class="ng-star-inserted"><a href="#"
+                                            class="k-grid-header-menu k-grid-column-menu" tabindex="0"
+                                            title="Document Column Menu"><span
+                                                class="k-icon k-i-more-vertical"></span></a><!----><!----></kendo-grid-column-menu><!----></span><!----><!----><!----><span
+                                    kendogridcolumnhandle="" kendodraggable="" class="k-column-resizer ng-star-inserted"
+                                    style="display: block; right: 0px;"></span><!---->
+                            </th>
+                            <!----><!----><!---->
+                            <th kendogridlogicalcell="" role="columnheader" aria-selected="false" kendodroptarget=""
+                                kendodraggable="" kendodraggablecolumn=""
+                                class="k-header k-filterable k-touch-action-none k-grid-draggable-header ng-star-inserted k-sorted"
+                                rowspan="1" colspan="1" aria-colindex="6" aria-sort="ascending">
+                                <!----><span class="k-cell-inner ng-star-inserted"><span class="k-link"><!----><span
+                                            class="k-column-title ng-star-inserted">Due
+                                            Date</span><!----><!----><span role="note" aria-label="Sortable"
+                                            class="k-icon k-i-sort-asc-small"></span><!----></span><span role="status"
+                                        class="k-sort-status" style="position: absolute; left: -10000px;">Sorted
+                                        Ascending</span><!----><kendo-grid-column-menu class="ng-star-inserted"><a
+                                            href="#" class="k-grid-header-menu k-grid-column-menu" tabindex="0"
+                                            title="Due Date Column Menu"><span
+                                                class="k-icon k-i-more-vertical"></span></a><!----><!----></kendo-grid-column-menu><!----></span><!----><!----><!----><span
+                                    kendogridcolumnhandle="" kendodraggable="" class="k-column-resizer ng-star-inserted"
+                                    style="display: block; right: 0px;"></span><!---->
+                            </th>
+                            <!----><!----><!---->
+                            <th kendogridlogicalcell="" role="columnheader" aria-selected="false" kendodroptarget=""
+                                kendodraggable="" kendodraggablecolumn=""
+                                class="k-header k-filterable k-touch-action-none k-grid-draggable-header ng-star-inserted"
+                                rowspan="1" colspan="1" aria-colindex="7">
+                                <!----><span class="k-cell-inner ng-star-inserted"><span class="k-link"><!----><span
+                                            class="k-column-title ng-star-inserted">Workflow
+                                            Process</span><!----><!----><span role="note"
+                                            aria-label="Sortable"></span><!----></span><span role="status"
+                                        class="k-sort-status"
+                                        style="position: absolute; left: -10000px;"></span><!----><kendo-grid-column-menu
+                                        class="ng-star-inserted"><a href="#"
+                                            class="k-grid-header-menu k-grid-column-menu" tabindex="0"
+                                            title="Workflow Process Column Menu"><span
+                                                class="k-icon k-i-more-vertical"></span></a><!----><!----></kendo-grid-column-menu><!----></span><!----><!----><!----><span
+                                    kendogridcolumnhandle="" kendodraggable="" class="k-column-resizer ng-star-inserted"
+                                    style="display: block; right: 0px;"></span><!---->
+                            </th>
+                            <!----><!----><!---->
+                            <th kendogridlogicalcell="" role="columnheader" aria-selected="false" kendodroptarget=""
+                                kendodraggable="" kendodraggablecolumn=""
+                                class="k-header k-filterable k-touch-action-none k-grid-draggable-header ng-star-inserted text-center"
+                                rowspan="1" colspan="1" aria-colindex="8">
+                                <span class="k-cell-inner ng-star-inserted"><span class="k-link"><!----><span
+                                            class="k-column-title ng-star-inserted">Actions</span><!----><!----></span><!----><kendo-grid-column-menu
+                                        class="ng-star-inserted"><a href="#"
+                                            class="k-grid-header-menu k-grid-column-menu" tabindex="0"
+                                            title="Actions Column Menu"><span
+                                                class="k-icon k-i-more-vertical"></span></a><!----><!----></kendo-grid-column-menu><!----></span><!----><!----><!----><!----><span
+                                    kendogridcolumnhandle="" kendodraggable="" class="k-column-resizer ng-star-inserted"
+                                    style="display: block; right: 0px;"></span><!---->
+                            </th>
+                            <!----><!----><!----><!---->
+                        </tr><!----><!----><!---->
+                    </thead>
+                </table><!---->
+            </div>
+        </div><!----><kendo-grid-list kendodraggable="" kendogridselectionmarquee="" role="presentation"
+            class="k-grid-container ng-star-inserted"><!---->
+            <div role="presentation" tabindex="-1" class="k-grid-content k-virtual-content">
+                <div role="presentation" class="k-grid-table-wrap">
+                    <table role="presentation" class="k-grid-table">
+                        <colgroup kendogridcolgroup="" role="presentation">
+                            <!----><!---->
+                            <col class="ng-star-inserted" style="width: 64px;">
+                            <col style="width: 115px;" class="ng-star-inserted">
+                            <col style="width: 158px;" class="ng-star-inserted">
+                            <col style="width: 130px;" class="ng-star-inserted">
+                            <col style="width: 210px;" class="ng-star-inserted">
+                            <col style="width: 176px;" class="ng-star-inserted k-sorted">
+                            <col style="width: 168px;" class="ng-star-inserted">
+                            <col style="width: 124px;" class="ng-star-inserted">
+                            <!----><!---->
+                        </colgroup>
+                        <tbody kendogridtablebody="" role="presentation">
+                            <!----><!----><!---->
+                            <tr kendogridlogicalrow="" class="k-master-row ng-star-inserted"
+                                data-kendo-grid-item-index="0" role="row" aria-rowindex="2">
+                                <!----><!----><!----><!---->
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto text-center ng-star-inserted"
+                                    data-kendo-grid-column-index="0" aria-selected="false" colspan="1"
+                                    aria-colindex="1">
+                                    <!----><label class="c-checkbox mb-0 o-5 ng-star-inserted">
+                                        <div kendotooltip="" position="right" tooltipclass="lic-tooltip" type="checkbox"
+                                            filter="p" class="d-inline-block">
+                                            <p class="cursor-pointer"
+                                                title="The ability to allow bulk approval and/or bulk rejection has not been enabled for this task.">
+                                                <span class="c-checkbox-box"><svg width="11px" height="8px"
+                                                        viewBox="0 0 11 8" version="1.1">
+                                                        <g stroke="none" stroke-width="1" fill="none"
+                                                            fill-rule="evenodd">
+                                                            <g transform="translate(-4.000000, -6.000000)"
+                                                                fill="#24BFC7" class="set-s-fill">
+                                                                <path
+                                                                    d="M14.5983382,7.88310204 L8.88432353,13.6497959 C8.46114706,14.076898 7.77477941,14.076898 7.35127941,13.6497959 L4.40166176,10.6724898 C3.97832353,10.2453878 3.97832353,9.55265306 4.40166176,9.12538776 C4.825,8.69812245 5.51136765,8.69812245 5.93454412,9.12522449 L8.11804412,11.3289796 L13.0652941,6.33583673 C13.4886324,5.90857143 14.175,5.90889796 14.5981765,6.33583673 C15.0215147,6.76310204 15.0215147,7.45567347 14.5983382,7.88310204 Z">
+                                                                </path>
+                                                            </g>
+                                                        </g>
+                                                    </svg></span>
+                                            </p>
+                                        </div>
+                                    </label><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto text-center ng-star-inserted"
+                                    data-kendo-grid-column-index="1" aria-selected="false" colspan="1"
+                                    aria-colindex="2">
+                                    <div kendotooltip="" position="bottom" tooltipclass="lic-tooltip" filter="div"
+                                        class="d-inline-block c-grid-more-info float-none tra-0 ng-star-inserted">
+                                        <div data-title="" class="lt-image" style="cursor: pointer;"
+                                            title="Form Solution">
+                                            F<span>S</span>
+                                        </div>
+                                    </div>
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="2"
+                                    aria-selected="false" colspan="1" aria-colindex="3">
+                                    <div href="javascript:void(0)" class="grid-link ng-star-inserted"
+                                        style="cursor: pointer;">
+                                        HR </div>
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="3"
+                                    aria-selected="false" colspan="1" aria-colindex="4">
+                                    <span class="status-lbl red ng-star-inserted"></span><!----><!----><!----><!---->
+                                    Overdue
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="4"
+                                    aria-selected="false" colspan="1" aria-colindex="5">
+                                    <!----><!---->Mudz
+                                    Test 11/5/2024
+                                    11:19:02
+                                    PM<!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="5"
+                                    aria-selected="false" colspan="1" aria-colindex="6">
+                                    11/6/2024
+                                    11:19:03 PM
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="6"
+                                    aria-selected="false" colspan="1" aria-colindex="7">
+                                    <!----><!---->Mudz
+                                    Test<!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto text-center ng-star-inserted"
+                                    data-kendo-grid-column-index="7" aria-selected="false" colspan="1"
+                                    aria-colindex="8">
+                                    <div dropdown="" container="body"
+                                        class="actions-dropdown open show dropup ng-star-inserted">
+                                        <button class="dropdown-toggle ng-star-inserted"><img
+                                                src="../assets/images/action-dropdown-icon.svg" alt="Menu"
+                                                width="17"></button><!----><!----><!---->
+                                    </div>
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td><!---->
+                            </tr>
+                            <!----><!----><!----><!----><!---->
+                            <tr kendogridlogicalrow="" class="k-alt k-master-row ng-star-inserted"
+                                data-kendo-grid-item-index="1" role="row" aria-rowindex="3">
+                                <!----><!----><!----><!---->
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto text-center ng-star-inserted"
+                                    data-kendo-grid-column-index="0" aria-selected="false" colspan="1"
+                                    aria-colindex="1">
+                                    <!----><label class="c-checkbox mb-0 o-5 ng-star-inserted">
+                                        <div kendotooltip="" position="right" tooltipclass="lic-tooltip" type="checkbox"
+                                            filter="p" class="d-inline-block">
+                                            <p class="cursor-pointer"
+                                                title="The ability to allow bulk approval and/or bulk rejection has not been enabled for this task.">
+                                                <span class="c-checkbox-box"><svg width="11px" height="8px"
+                                                        viewBox="0 0 11 8" version="1.1">
+                                                        <g stroke="none" stroke-width="1" fill="none"
+                                                            fill-rule="evenodd">
+                                                            <g transform="translate(-4.000000, -6.000000)"
+                                                                fill="#24BFC7" class="set-s-fill">
+                                                                <path
+                                                                    d="M14.5983382,7.88310204 L8.88432353,13.6497959 C8.46114706,14.076898 7.77477941,14.076898 7.35127941,13.6497959 L4.40166176,10.6724898 C3.97832353,10.2453878 3.97832353,9.55265306 4.40166176,9.12538776 C4.825,8.69812245 5.51136765,8.69812245 5.93454412,9.12522449 L8.11804412,11.3289796 L13.0652941,6.33583673 C13.4886324,5.90857143 14.175,5.90889796 14.5981765,6.33583673 C15.0215147,6.76310204 15.0215147,7.45567347 14.5983382,7.88310204 Z">
+                                                                </path>
+                                                            </g>
+                                                        </g>
+                                                    </svg></span>
+                                            </p>
+                                        </div>
+                                    </label><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto text-center ng-star-inserted"
+                                    data-kendo-grid-column-index="1" aria-selected="false" colspan="1"
+                                    aria-colindex="2">
+                                    <div kendotooltip="" position="bottom" tooltipclass="lic-tooltip" filter="div"
+                                        class="d-inline-block c-grid-more-info float-none tra-0 ng-star-inserted">
+                                        <div data-title="" class="lt-image" style="cursor: pointer;"
+                                            title="Form Solution">
+                                            F<span>S</span>
+                                        </div>
+                                    </div>
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="2"
+                                    aria-selected="false" colspan="1" aria-colindex="3">
+                                    <div href="javascript:void(0)" class="grid-link ng-star-inserted"
+                                        style="cursor: pointer;">
+                                        HR </div>
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="3"
+                                    aria-selected="false" colspan="1" aria-colindex="4">
+                                    <span class="status-lbl red ng-star-inserted"></span><!----><!----><!----><!---->
+                                    Overdue
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="4"
+                                    aria-selected="false" colspan="1" aria-colindex="5">
+                                    <!----><!---->Mudz
+                                    Test 11/6/2024
+                                    7:48:18
+                                    PM<!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="5"
+                                    aria-selected="false" colspan="1" aria-colindex="6">
+                                    11/7/2024
+                                    7:48:18 PM
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="6"
+                                    aria-selected="false" colspan="1" aria-colindex="7">
+                                    <!----><!---->Mudz
+                                    Test<!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto text-center ng-star-inserted"
+                                    data-kendo-grid-column-index="7" aria-selected="false" colspan="1"
+                                    aria-colindex="8">
+                                    <div dropdown="" container="body"
+                                        class="actions-dropdown open show dropup ng-star-inserted">
+                                        <button class="dropdown-toggle ng-star-inserted"><img
+                                                src="../assets/images/action-dropdown-icon.svg" alt="Menu"
+                                                width="17"></button><!----><!----><!---->
+                                    </div>
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td><!---->
+                            </tr>
+                            <!----><!----><!----><!----><!---->
+                            <tr kendogridlogicalrow="" class="k-master-row ng-star-inserted"
+                                data-kendo-grid-item-index="2" role="row" aria-rowindex="4">
+                                <!----><!----><!----><!---->
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto text-center ng-star-inserted"
+                                    data-kendo-grid-column-index="0" aria-selected="false" colspan="1"
+                                    aria-colindex="1">
+                                    <!----><label class="c-checkbox mb-0 o-5 ng-star-inserted">
+                                        <div kendotooltip="" position="right" tooltipclass="lic-tooltip" type="checkbox"
+                                            filter="p" class="d-inline-block">
+                                            <p class="cursor-pointer"
+                                                title="The ability to allow bulk approval and/or bulk rejection has not been enabled for this task.">
+                                                <span class="c-checkbox-box"><svg width="11px" height="8px"
+                                                        viewBox="0 0 11 8" version="1.1">
+                                                        <g stroke="none" stroke-width="1" fill="none"
+                                                            fill-rule="evenodd">
+                                                            <g transform="translate(-4.000000, -6.000000)"
+                                                                fill="#24BFC7" class="set-s-fill">
+                                                                <path
+                                                                    d="M14.5983382,7.88310204 L8.88432353,13.6497959 C8.46114706,14.076898 7.77477941,14.076898 7.35127941,13.6497959 L4.40166176,10.6724898 C3.97832353,10.2453878 3.97832353,9.55265306 4.40166176,9.12538776 C4.825,8.69812245 5.51136765,8.69812245 5.93454412,9.12522449 L8.11804412,11.3289796 L13.0652941,6.33583673 C13.4886324,5.90857143 14.175,5.90889796 14.5981765,6.33583673 C15.0215147,6.76310204 15.0215147,7.45567347 14.5983382,7.88310204 Z">
+                                                                </path>
+                                                            </g>
+                                                        </g>
+                                                    </svg></span>
+                                            </p>
+                                        </div>
+                                    </label><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto text-center ng-star-inserted"
+                                    data-kendo-grid-column-index="1" aria-selected="false" colspan="1"
+                                    aria-colindex="2">
+                                    <div kendotooltip="" position="bottom" tooltipclass="lic-tooltip" filter="div"
+                                        class="d-inline-block c-grid-more-info float-none tra-0 ng-star-inserted">
+                                        <div data-title="" class="lt-image" style="cursor: pointer;"
+                                            title="Form Solution">
+                                            F<span>S</span>
+                                        </div>
+                                    </div>
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="2"
+                                    aria-selected="false" colspan="1" aria-colindex="3">
+                                    <div href="javascript:void(0)" class="grid-link ng-star-inserted"
+                                        style="cursor: pointer;">
+                                        HR </div>
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="3"
+                                    aria-selected="false" colspan="1" aria-colindex="4">
+                                    <span class="status-lbl red ng-star-inserted"></span><!----><!----><!----><!---->
+                                    Overdue
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="4"
+                                    aria-selected="false" colspan="1" aria-colindex="5">
+                                    <!----><!---->Mudz
+                                    Test 11/6/2024
+                                    8:02:53
+                                    PM<!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="5"
+                                    aria-selected="false" colspan="1" aria-colindex="6">
+                                    11/7/2024
+                                    8:02:53 PM
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="6"
+                                    aria-selected="false" colspan="1" aria-colindex="7">
+                                    <!----><!---->Mudz
+                                    Test<!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto text-center ng-star-inserted"
+                                    data-kendo-grid-column-index="7" aria-selected="false" colspan="1"
+                                    aria-colindex="8">
+                                    <div dropdown="" container="body"
+                                        class="actions-dropdown open show dropup ng-star-inserted">
+                                        <button class="dropdown-toggle ng-star-inserted"><img
+                                                src="../assets/images/action-dropdown-icon.svg" alt="Menu"
+                                                width="17"></button><!----><!----><!---->
+                                    </div>
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td><!---->
+                            </tr>
+                            <!----><!----><!----><!----><!---->
+                            <tr kendogridlogicalrow="" class="k-alt k-master-row ng-star-inserted"
+                                data-kendo-grid-item-index="3" role="row" aria-rowindex="5">
+                                <!----><!----><!----><!---->
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto text-center ng-star-inserted"
+                                    data-kendo-grid-column-index="0" aria-selected="false" colspan="1"
+                                    aria-colindex="1">
+                                    <!----><label class="c-checkbox mb-0 o-5 ng-star-inserted">
+                                        <div kendotooltip="" position="right" tooltipclass="lic-tooltip" type="checkbox"
+                                            filter="p" class="d-inline-block">
+                                            <p class="cursor-pointer"
+                                                title="The ability to allow bulk approval and/or bulk rejection has not been enabled for this task.">
+                                                <span class="c-checkbox-box"><svg width="11px" height="8px"
+                                                        viewBox="0 0 11 8" version="1.1">
+                                                        <g stroke="none" stroke-width="1" fill="none"
+                                                            fill-rule="evenodd">
+                                                            <g transform="translate(-4.000000, -6.000000)"
+                                                                fill="#24BFC7" class="set-s-fill">
+                                                                <path
+                                                                    d="M14.5983382,7.88310204 L8.88432353,13.6497959 C8.46114706,14.076898 7.77477941,14.076898 7.35127941,13.6497959 L4.40166176,10.6724898 C3.97832353,10.2453878 3.97832353,9.55265306 4.40166176,9.12538776 C4.825,8.69812245 5.51136765,8.69812245 5.93454412,9.12522449 L8.11804412,11.3289796 L13.0652941,6.33583673 C13.4886324,5.90857143 14.175,5.90889796 14.5981765,6.33583673 C15.0215147,6.76310204 15.0215147,7.45567347 14.5983382,7.88310204 Z">
+                                                                </path>
+                                                            </g>
+                                                        </g>
+                                                    </svg></span>
+                                            </p>
+                                        </div>
+                                    </label><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto text-center ng-star-inserted"
+                                    data-kendo-grid-column-index="1" aria-selected="false" colspan="1"
+                                    aria-colindex="2">
+                                    <div kendotooltip="" position="bottom" tooltipclass="lic-tooltip" filter="div"
+                                        class="d-inline-block c-grid-more-info float-none tra-0 ng-star-inserted">
+                                        <div data-title="" class="lt-image" style="cursor: pointer;"
+                                            title="Form Solution">
+                                            F<span>S</span>
+                                        </div>
+                                    </div>
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="2"
+                                    aria-selected="false" colspan="1" aria-colindex="3">
+                                    <div href="javascript:void(0)" class="grid-link ng-star-inserted"
+                                        style="cursor: pointer;">
+                                        Technical
+                                    </div>
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="3"
+                                    aria-selected="false" colspan="1" aria-colindex="4">
+                                    <span class="status-lbl red ng-star-inserted"></span><!----><!----><!----><!---->
+                                    Overdue
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="4"
+                                    aria-selected="false" colspan="1" aria-colindex="5">
+                                    <!----><!---->Mudz
+                                    Test 11/7/2024
+                                    5:09:48
+                                    PM<!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="5"
+                                    aria-selected="false" colspan="1" aria-colindex="6">
+                                    11/8/2024
+                                    5:10:02 PM
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="6"
+                                    aria-selected="false" colspan="1" aria-colindex="7">
+                                    <!----><!---->Mudz
+                                    Test<!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto text-center ng-star-inserted"
+                                    data-kendo-grid-column-index="7" aria-selected="false" colspan="1"
+                                    aria-colindex="8">
+                                    <div dropdown="" container="body"
+                                        class="actions-dropdown open show dropup ng-star-inserted">
+                                        <button class="dropdown-toggle ng-star-inserted"><img
+                                                src="../assets/images/action-dropdown-icon.svg" alt="Menu"
+                                                width="17"></button><!----><!----><!---->
+                                    </div>
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td><!---->
+                            </tr>
+                            <!----><!----><!----><!----><!---->
+                            <tr kendogridlogicalrow="" class="k-master-row ng-star-inserted"
+                                data-kendo-grid-item-index="4" role="row" aria-rowindex="6">
+                                <!----><!----><!----><!---->
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto text-center ng-star-inserted"
+                                    data-kendo-grid-column-index="0" aria-selected="false" colspan="1"
+                                    aria-colindex="1">
+                                    <!----><label class="c-checkbox mb-0 o-5 ng-star-inserted">
+                                        <div kendotooltip="" position="right" tooltipclass="lic-tooltip" type="checkbox"
+                                            filter="p" class="d-inline-block">
+                                            <p class="cursor-pointer"
+                                                title="The ability to allow bulk approval and/or bulk rejection has not been enabled for this task.">
+                                                <span class="c-checkbox-box"><svg width="11px" height="8px"
+                                                        viewBox="0 0 11 8" version="1.1">
+                                                        <g stroke="none" stroke-width="1" fill="none"
+                                                            fill-rule="evenodd">
+                                                            <g transform="translate(-4.000000, -6.000000)"
+                                                                fill="#24BFC7" class="set-s-fill">
+                                                                <path
+                                                                    d="M14.5983382,7.88310204 L8.88432353,13.6497959 C8.46114706,14.076898 7.77477941,14.076898 7.35127941,13.6497959 L4.40166176,10.6724898 C3.97832353,10.2453878 3.97832353,9.55265306 4.40166176,9.12538776 C4.825,8.69812245 5.51136765,8.69812245 5.93454412,9.12522449 L8.11804412,11.3289796 L13.0652941,6.33583673 C13.4886324,5.90857143 14.175,5.90889796 14.5981765,6.33583673 C15.0215147,6.76310204 15.0215147,7.45567347 14.5983382,7.88310204 Z">
+                                                                </path>
+                                                            </g>
+                                                        </g>
+                                                    </svg></span>
+                                            </p>
+                                        </div>
+                                    </label><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto text-center ng-star-inserted"
+                                    data-kendo-grid-column-index="1" aria-selected="false" colspan="1"
+                                    aria-colindex="2">
+                                    <div kendotooltip="" position="bottom" tooltipclass="lic-tooltip" filter="div"
+                                        class="d-inline-block c-grid-more-info float-none tra-0 ng-star-inserted">
+                                        <div data-title="" class="lt-image" style="cursor: pointer;"
+                                            title="Form Solution">
+                                            F<span>S</span>
+                                        </div>
+                                    </div>
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="2"
+                                    aria-selected="false" colspan="1" aria-colindex="3">
+                                    <div href="javascript:void(0)" class="grid-link ng-star-inserted"
+                                        style="cursor: pointer;">
+                                        Technical
+                                    </div>
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="3"
+                                    aria-selected="false" colspan="1" aria-colindex="4">
+                                    <span class="status-lbl red ng-star-inserted"></span><!----><!----><!----><!---->
+                                    Overdue
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="4"
+                                    aria-selected="false" colspan="1" aria-colindex="5">
+                                    <!----><!---->Mudz
+                                    Test 11/7/2024
+                                    9:31:17
+                                    PM<!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="5"
+                                    aria-selected="false" colspan="1" aria-colindex="6">
+                                    11/8/2024
+                                    9:31:27 PM
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="6"
+                                    aria-selected="false" colspan="1" aria-colindex="7">
+                                    <!----><!---->Mudz
+                                    Test<!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto text-center ng-star-inserted"
+                                    data-kendo-grid-column-index="7" aria-selected="false" colspan="1"
+                                    aria-colindex="8">
+                                    <div dropdown="" container="body"
+                                        class="actions-dropdown open show dropup ng-star-inserted">
+                                        <button class="dropdown-toggle ng-star-inserted"><img
+                                                src="../assets/images/action-dropdown-icon.svg" alt="Menu"
+                                                width="17"></button><!----><!----><!---->
+                                    </div>
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td><!---->
+                            </tr>
+                            <!----><!----><!----><!----><!---->
+                            <tr kendogridlogicalrow="" class="k-alt k-master-row ng-star-inserted"
+                                data-kendo-grid-item-index="5" role="row" aria-rowindex="7">
+                                <!----><!----><!----><!---->
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto text-center ng-star-inserted"
+                                    data-kendo-grid-column-index="0" aria-selected="false" colspan="1"
+                                    aria-colindex="1">
+                                    <!----><label class="c-checkbox mb-0 o-5 ng-star-inserted">
+                                        <div kendotooltip="" position="right" tooltipclass="lic-tooltip" type="checkbox"
+                                            filter="p" class="d-inline-block">
+                                            <p class="cursor-pointer"
+                                                title="The ability to allow bulk approval and/or bulk rejection has not been enabled for this task.">
+                                                <span class="c-checkbox-box"><svg width="11px" height="8px"
+                                                        viewBox="0 0 11 8" version="1.1">
+                                                        <g stroke="none" stroke-width="1" fill="none"
+                                                            fill-rule="evenodd">
+                                                            <g transform="translate(-4.000000, -6.000000)"
+                                                                fill="#24BFC7" class="set-s-fill">
+                                                                <path
+                                                                    d="M14.5983382,7.88310204 L8.88432353,13.6497959 C8.46114706,14.076898 7.77477941,14.076898 7.35127941,13.6497959 L4.40166176,10.6724898 C3.97832353,10.2453878 3.97832353,9.55265306 4.40166176,9.12538776 C4.825,8.69812245 5.51136765,8.69812245 5.93454412,9.12522449 L8.11804412,11.3289796 L13.0652941,6.33583673 C13.4886324,5.90857143 14.175,5.90889796 14.5981765,6.33583673 C15.0215147,6.76310204 15.0215147,7.45567347 14.5983382,7.88310204 Z">
+                                                                </path>
+                                                            </g>
+                                                        </g>
+                                                    </svg></span>
+                                            </p>
+                                        </div>
+                                    </label><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto text-center ng-star-inserted"
+                                    data-kendo-grid-column-index="1" aria-selected="false" colspan="1"
+                                    aria-colindex="2">
+                                    <div kendotooltip="" position="bottom" tooltipclass="lic-tooltip" filter="div"
+                                        class="d-inline-block c-grid-more-info float-none tra-0 ng-star-inserted">
+                                        <div data-title="" class="lt-image" style="cursor: pointer;"
+                                            title="Form Solution">
+                                            F<span>S</span>
+                                        </div>
+                                    </div>
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="2"
+                                    aria-selected="false" colspan="1" aria-colindex="3">
+                                    <div href="javascript:void(0)" class="grid-link ng-star-inserted"
+                                        style="cursor: pointer;">
+                                        Technical
+                                    </div>
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="3"
+                                    aria-selected="false" colspan="1" aria-colindex="4">
+                                    <span class="status-lbl red ng-star-inserted"></span><!----><!----><!----><!---->
+                                    Overdue
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="4"
+                                    aria-selected="false" colspan="1" aria-colindex="5">
+                                    <!----><!---->Mudz
+                                    Test 11/7/2024
+                                    9:52:06
+                                    PM<!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="5"
+                                    aria-selected="false" colspan="1" aria-colindex="6">
+                                    11/8/2024
+                                    9:52:18 PM
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="6"
+                                    aria-selected="false" colspan="1" aria-colindex="7">
+                                    <!----><!---->Mudz
+                                    Test<!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto text-center ng-star-inserted"
+                                    data-kendo-grid-column-index="7" aria-selected="false" colspan="1"
+                                    aria-colindex="8">
+                                    <div dropdown="" container="body"
+                                        class="actions-dropdown open show dropup ng-star-inserted">
+                                        <button class="dropdown-toggle ng-star-inserted"><img
+                                                src="../assets/images/action-dropdown-icon.svg" alt="Menu"
+                                                width="17"></button><!----><!----><!---->
+                                    </div>
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td><!---->
+                            </tr>
+                            <!----><!----><!----><!----><!---->
+                            <tr kendogridlogicalrow="" class="k-master-row ng-star-inserted"
+                                data-kendo-grid-item-index="6" role="row" aria-rowindex="8">
+                                <!----><!----><!----><!---->
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto text-center ng-star-inserted"
+                                    data-kendo-grid-column-index="0" aria-selected="false" colspan="1"
+                                    aria-colindex="1">
+                                    <!----><label class="c-checkbox mb-0 o-5 ng-star-inserted">
+                                        <div kendotooltip="" position="right" tooltipclass="lic-tooltip" type="checkbox"
+                                            filter="p" class="d-inline-block">
+                                            <p class="cursor-pointer"
+                                                title="The ability to allow bulk approval and/or bulk rejection has not been enabled for this task.">
+                                                <span class="c-checkbox-box"><svg width="11px" height="8px"
+                                                        viewBox="0 0 11 8" version="1.1">
+                                                        <g stroke="none" stroke-width="1" fill="none"
+                                                            fill-rule="evenodd">
+                                                            <g transform="translate(-4.000000, -6.000000)"
+                                                                fill="#24BFC7" class="set-s-fill">
+                                                                <path
+                                                                    d="M14.5983382,7.88310204 L8.88432353,13.6497959 C8.46114706,14.076898 7.77477941,14.076898 7.35127941,13.6497959 L4.40166176,10.6724898 C3.97832353,10.2453878 3.97832353,9.55265306 4.40166176,9.12538776 C4.825,8.69812245 5.51136765,8.69812245 5.93454412,9.12522449 L8.11804412,11.3289796 L13.0652941,6.33583673 C13.4886324,5.90857143 14.175,5.90889796 14.5981765,6.33583673 C15.0215147,6.76310204 15.0215147,7.45567347 14.5983382,7.88310204 Z">
+                                                                </path>
+                                                            </g>
+                                                        </g>
+                                                    </svg></span>
+                                            </p>
+                                        </div>
+                                    </label><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto text-center ng-star-inserted"
+                                    data-kendo-grid-column-index="1" aria-selected="false" colspan="1"
+                                    aria-colindex="2">
+                                    <div kendotooltip="" position="bottom" tooltipclass="lic-tooltip" filter="div"
+                                        class="d-inline-block c-grid-more-info float-none tra-0 ng-star-inserted">
+                                        <div data-title="" class="lt-image" style="cursor: pointer;"
+                                            title="Form Solution">
+                                            F<span>S</span>
+                                        </div>
+                                    </div>
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="2"
+                                    aria-selected="false" colspan="1" aria-colindex="3">
+                                    <div href="javascript:void(0)" class="grid-link ng-star-inserted"
+                                        style="cursor: pointer;">
+                                        Customer
+                                        Create MD
+                                    </div>
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="3"
+                                    aria-selected="false" colspan="1" aria-colindex="4">
+                                    <span class="status-lbl red ng-star-inserted"></span><!----><!----><!----><!---->
+                                    Overdue
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="4"
+                                    aria-selected="false" colspan="1" aria-colindex="5">
+                                    <!----><!---->CUSTNEW-0002277<!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="5"
+                                    aria-selected="false" colspan="1" aria-colindex="6">
+                                    11/16/2024
+                                    5:08:48 AM
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="6"
+                                    aria-selected="false" colspan="1" aria-colindex="7">
+                                    <!----><!---->Customer
+                                    Create<!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto text-center ng-star-inserted"
+                                    data-kendo-grid-column-index="7" aria-selected="false" colspan="1"
+                                    aria-colindex="8">
+                                    <div dropdown="" container="body"
+                                        class="actions-dropdown open show dropup ng-star-inserted">
+                                        <button class="dropdown-toggle ng-star-inserted"><img
+                                                src="../assets/images/action-dropdown-icon.svg" alt="Menu"
+                                                width="17"></button><!----><!----><!---->
+                                    </div>
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td><!---->
+                            </tr>
+                            <!----><!----><!----><!----><!---->
+                            <tr kendogridlogicalrow="" class="k-alt k-master-row ng-star-inserted"
+                                data-kendo-grid-item-index="7" role="row" aria-rowindex="9">
+                                <!----><!----><!----><!---->
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto text-center ng-star-inserted"
+                                    data-kendo-grid-column-index="0" aria-selected="false" colspan="1"
+                                    aria-colindex="1">
+                                    <!----><label class="c-checkbox mb-0 o-5 ng-star-inserted">
+                                        <div kendotooltip="" position="right" tooltipclass="lic-tooltip" type="checkbox"
+                                            filter="p" class="d-inline-block">
+                                            <p class="cursor-pointer"
+                                                title="The ability to allow bulk approval and/or bulk rejection has not been enabled for this task.">
+                                                <span class="c-checkbox-box"><svg width="11px" height="8px"
+                                                        viewBox="0 0 11 8" version="1.1">
+                                                        <g stroke="none" stroke-width="1" fill="none"
+                                                            fill-rule="evenodd">
+                                                            <g transform="translate(-4.000000, -6.000000)"
+                                                                fill="#24BFC7" class="set-s-fill">
+                                                                <path
+                                                                    d="M14.5983382,7.88310204 L8.88432353,13.6497959 C8.46114706,14.076898 7.77477941,14.076898 7.35127941,13.6497959 L4.40166176,10.6724898 C3.97832353,10.2453878 3.97832353,9.55265306 4.40166176,9.12538776 C4.825,8.69812245 5.51136765,8.69812245 5.93454412,9.12522449 L8.11804412,11.3289796 L13.0652941,6.33583673 C13.4886324,5.90857143 14.175,5.90889796 14.5981765,6.33583673 C15.0215147,6.76310204 15.0215147,7.45567347 14.5983382,7.88310204 Z">
+                                                                </path>
+                                                            </g>
+                                                        </g>
+                                                    </svg></span>
+                                            </p>
+                                        </div>
+                                    </label><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto text-center ng-star-inserted"
+                                    data-kendo-grid-column-index="1" aria-selected="false" colspan="1"
+                                    aria-colindex="2">
+                                    <div kendotooltip="" position="bottom" tooltipclass="lic-tooltip" filter="div"
+                                        class="d-inline-block c-grid-more-info float-none tra-0 ng-star-inserted">
+                                        <div data-title="" class="lt-image" style="cursor: pointer;"
+                                            title="Form Solution">
+                                            F<span>S</span>
+                                        </div>
+                                    </div>
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="2"
+                                    aria-selected="false" colspan="1" aria-colindex="3">
+                                    <div href="javascript:void(0)" class="grid-link ng-star-inserted"
+                                        style="cursor: pointer;">
+                                        Customer
+                                        Create MD
+                                    </div>
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="3"
+                                    aria-selected="false" colspan="1" aria-colindex="4">
+                                    <span class="status-lbl red ng-star-inserted"></span><!----><!----><!----><!---->
+                                    Overdue
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="4"
+                                    aria-selected="false" colspan="1" aria-colindex="5">
+                                    <!----><!---->CUSTNEW-0002282<!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="5"
+                                    aria-selected="false" colspan="1" aria-colindex="6">
+                                    11/18/2024
+                                    6:24:06 PM
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="6"
+                                    aria-selected="false" colspan="1" aria-colindex="7">
+                                    <!----><!---->Customer
+                                    Create<!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto text-center ng-star-inserted"
+                                    data-kendo-grid-column-index="7" aria-selected="false" colspan="1"
+                                    aria-colindex="8">
+                                    <div dropdown="" container="body"
+                                        class="actions-dropdown open show dropup ng-star-inserted">
+                                        <button class="dropdown-toggle ng-star-inserted"><img
+                                                src="../assets/images/action-dropdown-icon.svg" alt="Menu"
+                                                width="17"></button><!----><!----><!---->
+                                    </div>
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td><!---->
+                            </tr>
+                            <!----><!----><!----><!----><!---->
+                            <tr kendogridlogicalrow="" class="k-master-row ng-star-inserted"
+                                data-kendo-grid-item-index="8" role="row" aria-rowindex="10">
+                                <!----><!----><!----><!---->
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto text-center ng-star-inserted"
+                                    data-kendo-grid-column-index="0" aria-selected="false" colspan="1"
+                                    aria-colindex="1">
+                                    <!----><label class="c-checkbox mb-0 o-5 ng-star-inserted">
+                                        <div kendotooltip="" position="right" tooltipclass="lic-tooltip" type="checkbox"
+                                            filter="p" class="d-inline-block">
+                                            <p class="cursor-pointer"
+                                                title="The ability to allow bulk approval and/or bulk rejection has not been enabled for this task.">
+                                                <span class="c-checkbox-box"><svg width="11px" height="8px"
+                                                        viewBox="0 0 11 8" version="1.1">
+                                                        <g stroke="none" stroke-width="1" fill="none"
+                                                            fill-rule="evenodd">
+                                                            <g transform="translate(-4.000000, -6.000000)"
+                                                                fill="#24BFC7" class="set-s-fill">
+                                                                <path
+                                                                    d="M14.5983382,7.88310204 L8.88432353,13.6497959 C8.46114706,14.076898 7.77477941,14.076898 7.35127941,13.6497959 L4.40166176,10.6724898 C3.97832353,10.2453878 3.97832353,9.55265306 4.40166176,9.12538776 C4.825,8.69812245 5.51136765,8.69812245 5.93454412,9.12522449 L8.11804412,11.3289796 L13.0652941,6.33583673 C13.4886324,5.90857143 14.175,5.90889796 14.5981765,6.33583673 C15.0215147,6.76310204 15.0215147,7.45567347 14.5983382,7.88310204 Z">
+                                                                </path>
+                                                            </g>
+                                                        </g>
+                                                    </svg></span>
+                                            </p>
+                                        </div>
+                                    </label><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto text-center ng-star-inserted"
+                                    data-kendo-grid-column-index="1" aria-selected="false" colspan="1"
+                                    aria-colindex="2">
+                                    <div kendotooltip="" position="bottom" tooltipclass="lic-tooltip" filter="div"
+                                        class="d-inline-block c-grid-more-info float-none tra-0 ng-star-inserted">
+                                        <div data-title="" class="lt-image" style="cursor: pointer;"
+                                            title="Form Solution">
+                                            F<span>S</span>
+                                        </div>
+                                    </div>
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="2"
+                                    aria-selected="false" colspan="1" aria-colindex="3">
+                                    <div href="javascript:void(0)" class="grid-link ng-star-inserted"
+                                        style="cursor: pointer;">
+                                        Customer
+                                        Create MD
+                                    </div>
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="3"
+                                    aria-selected="false" colspan="1" aria-colindex="4">
+                                    <span class="status-lbl red ng-star-inserted"></span><!----><!----><!----><!---->
+                                    Overdue
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="4"
+                                    aria-selected="false" colspan="1" aria-colindex="5">
+                                    <!----><!---->CUSTNEW-0002285<!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="5"
+                                    aria-selected="false" colspan="1" aria-colindex="6">
+                                    11/19/2024
+                                    12:19:46 AM
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="6"
+                                    aria-selected="false" colspan="1" aria-colindex="7">
+                                    <!----><!---->Customer
+                                    Create<!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto text-center ng-star-inserted"
+                                    data-kendo-grid-column-index="7" aria-selected="false" colspan="1"
+                                    aria-colindex="8">
+                                    <div dropdown="" container="body"
+                                        class="actions-dropdown open show dropup ng-star-inserted">
+                                        <button class="dropdown-toggle ng-star-inserted"><img
+                                                src="../assets/images/action-dropdown-icon.svg" alt="Menu"
+                                                width="17"></button><!----><!----><!---->
+                                    </div>
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td><!---->
+                            </tr>
+                            <!----><!----><!----><!----><!---->
+                            <tr kendogridlogicalrow="" class="k-alt k-master-row ng-star-inserted"
+                                data-kendo-grid-item-index="9" role="row" aria-rowindex="11">
+                                <!----><!----><!----><!---->
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto text-center ng-star-inserted"
+                                    data-kendo-grid-column-index="0" aria-selected="false" colspan="1"
+                                    aria-colindex="1">
+                                    <!----><label class="c-checkbox mb-0 o-5 ng-star-inserted">
+                                        <div kendotooltip="" position="right" tooltipclass="lic-tooltip" type="checkbox"
+                                            filter="p" class="d-inline-block">
+                                            <p class="cursor-pointer"
+                                                title="The ability to allow bulk approval and/or bulk rejection has not been enabled for this task.">
+                                                <span class="c-checkbox-box"><svg width="11px" height="8px"
+                                                        viewBox="0 0 11 8" version="1.1">
+                                                        <g stroke="none" stroke-width="1" fill="none"
+                                                            fill-rule="evenodd">
+                                                            <g transform="translate(-4.000000, -6.000000)"
+                                                                fill="#24BFC7" class="set-s-fill">
+                                                                <path
+                                                                    d="M14.5983382,7.88310204 L8.88432353,13.6497959 C8.46114706,14.076898 7.77477941,14.076898 7.35127941,13.6497959 L4.40166176,10.6724898 C3.97832353,10.2453878 3.97832353,9.55265306 4.40166176,9.12538776 C4.825,8.69812245 5.51136765,8.69812245 5.93454412,9.12522449 L8.11804412,11.3289796 L13.0652941,6.33583673 C13.4886324,5.90857143 14.175,5.90889796 14.5981765,6.33583673 C15.0215147,6.76310204 15.0215147,7.45567347 14.5983382,7.88310204 Z">
+                                                                </path>
+                                                            </g>
+                                                        </g>
+                                                    </svg></span>
+                                            </p>
+                                        </div>
+                                    </label><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto text-center ng-star-inserted"
+                                    data-kendo-grid-column-index="1" aria-selected="false" colspan="1"
+                                    aria-colindex="2">
+                                    <div kendotooltip="" position="bottom" tooltipclass="lic-tooltip" filter="div"
+                                        class="d-inline-block c-grid-more-info float-none tra-0 ng-star-inserted">
+                                        <div data-title="" class="lt-image" style="cursor: pointer;"
+                                            title="Form Solution">
+                                            F<span>S</span>
+                                        </div>
+                                    </div>
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="2"
+                                    aria-selected="false" colspan="1" aria-colindex="3">
+                                    <div href="javascript:void(0)" class="grid-link ng-star-inserted"
+                                        style="cursor: pointer;">
+                                        Customer Upd
+                                        MD </div>
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="3"
+                                    aria-selected="false" colspan="1" aria-colindex="4">
+                                    <span class="status-lbl red ng-star-inserted"></span><!----><!----><!----><!---->
+                                    Overdue
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="4"
+                                    aria-selected="false" colspan="1" aria-colindex="5">
+                                    <!----><!---->CUSTUPD-0002387<!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="5"
+                                    aria-selected="false" colspan="1" aria-colindex="6">
+                                    11/19/2024
+                                    3:33:37 PM
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto ng-star-inserted" data-kendo-grid-column-index="6"
+                                    aria-selected="false" colspan="1" aria-colindex="7">
+                                    <!----><!---->Customer
+                                    Update<!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto text-center ng-star-inserted"
+                                    data-kendo-grid-column-index="7" aria-selected="false" colspan="1"
+                                    aria-colindex="8">
+                                    <div dropdown="" container="body"
+                                        class="actions-dropdown open show dropup ng-star-inserted">
+                                        <button class="dropdown-toggle ng-star-inserted"><img
+                                                src="../assets/images/action-dropdown-icon.svg" alt="Menu"
+                                                width="17"></button><!----><!----><!---->
+                                    </div>
+                                    <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td><!---->
+                            </tr>
+                            <!----><!----><!----><!----><!----><!---->
+                        </tbody>
+                    </table><!---->
+                </div><!---->
+                <div role="presentation" class="k-height-container">
+                    <div style="height: 0px;"></div>
+                </div><!---->
+            </div>
+        </kendo-grid-list><!----><!----><!----><!----><!---->
+    </div><kendo-pager tabindex="-1" class="k-pager-wrap k-grid-pager ng-star-inserted"><!----><app-pagination
+            _nghost-vpm-c428="" class="ng-star-inserted"><kendo-pager-prev-buttons _ngcontent-vpm-c428=""><span
+                    role="button" title="Go to the First Page" class="k-link k-pager-nav k-disabled k-pager-first"><span
+                        role="note" aria-label="Go to the First Page"
+                        class="k-icon k-i-caret-alt-to-left"></span></span><span role="button"
+                    title="Go to the Previous Page" class="k-link k-pager-nav k-disabled"><span role="note"
+                        aria-label="Go to the Previous Page"
+                        class="k-icon k-i-caret-alt-left"></span></span></kendo-pager-prev-buttons><kendo-pager-numeric-buttons
+                _ngcontent-vpm-c428="" class="k-pager-numbers-wrap"><select kendogridfocusable="" tabindex="0"
+                    class="k-dropdownlist k-pager-nav"><!---->
+                    <option value="1" aria-label="Page 1" aria-current="page"
+                        class="k-link k-selected ng-star-inserted">
+                        1 </option>
+                    <option value="2" aria-label="Page 2" class="k-link ng-star-inserted">
+                        2 </option>
+                    <option value="3" aria-label="Page 3" class="k-link ng-star-inserted">
+                        3 </option>
+                    <option value="4" aria-label="Page 4" class="k-link ng-star-inserted">
+                        4 </option><!----><!---->
+                </select>
+                <ul class="k-pager-numbers k-reset">
+                    <!---->
+                    <li class="ng-star-inserted">
+                        <span kendogridfocusable="" tabindex="0" role="button" aria-label="Page 1"
+                            class="k-link k-selected k-pager-nav">
+                            1 </span>
+                    </li>
+                    <li class="ng-star-inserted">
+                        <span kendogridfocusable="" tabindex="0" role="button" aria-label="Page 2"
+                            class="k-link k-pager-nav">
+                            2 </span>
+                    </li>
+                    <li class="ng-star-inserted">
+                        <span kendogridfocusable="" tabindex="0" role="button" aria-label="Page 3"
+                            class="k-link k-pager-nav">
+                            3 </span>
+                    </li>
+                    <li class="ng-star-inserted">
+                        <span kendogridfocusable="" tabindex="0" role="button" aria-label="Page 4"
+                            class="k-link k-pager-nav">
+                            4 </span>
+                    </li>
+                    <!----><!---->
+                </ul>
+            </kendo-pager-numeric-buttons><kendo-pager-info _ngcontent-vpm-c428="" class="k-pager-info k-label">1 - 10
+                of 32
+                Items</kendo-pager-info><kendo-pager-next-buttons _ngcontent-vpm-c428=""><span tabindex="0"
+                    role="button" title="Go to the Next Page" class="k-link k-pager-nav"><span role="note"
+                        aria-label="Go to the Next Page" class="k-icon k-i-caret-alt-right"></span></span><span
+                    tabindex="0" role="button" title="Go to the Last Page" class="k-link k-pager-nav k-pager-last"><span
+                        role="note" aria-label="Go to the Last Page"
+                        class="k-icon k-i-caret-alt-to-right"></span></span></kendo-pager-next-buttons><kendo-dropdownlist
+                _ngcontent-vpm-c428="" id="dropdownKendo"
+                class="py-0 k-picker-md k-rounded-md k-picker-solid k-dropdownlist k-picker"
+                aria-describedby="2121453b-9c30-4fe7-90da-1f86e9f6270f" dir="ltr" tabindex="0" role="combobox"
+                aria-haspopup="listbox" aria-expanded="false"><!----><span unselectable="on" class="k-input-inner"
+                    id="2121453b-9c30-4fe7-90da-1f86e9f6270f"><span
+                        class="k-input-value-text"><!---->10<!----></span></span><button tabindex="-1" unselectable="on"
+                    type="button"
+                    class="k-input-button k-button k-icon-button k-button-md k-button-solid k-button-solid-base"
+                    aria-label="Select"><span unselectable="on"
+                        class="k-button-icon k-icon k-i-caret-alt-down"></span></button><!----><!----><!----></kendo-dropdownlist></app-pagination><!----><!----><!----><!----><kendo-resize-sensor
+            class="ng-star-inserted"></kendo-resize-sensor><!----></kendo-pager><!----><!---->
+</kendo-grid>
