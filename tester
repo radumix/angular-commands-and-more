@@ -1,4 +1,56 @@
 html inspect element:
 
 
+ <kendo-grid-list kendodraggable="" kendogridselectionmarquee="" role="presentation"
+            class="k-grid-container ng-star-inserted"><!---->
+            <div role="presentation" tabindex="-1" class="k-grid-content k-virtual-content">
+                <div role="presentation" class="k-grid-table-wrap">
+                    <table role="presentation" class="k-grid-table">
+                        <colgroup kendogridcolgroup="" role="presentation">
+                            <!----><!---->
+                            <col class="ng-star-inserted" style="width: 64px;">
+                            <col style="width: 115px;" class="ng-star-inserted">
+                            <col style="width: 158px;" class="ng-star-inserted">
+                            <col style="width: 130px;" class="ng-star-inserted">
+                            <col style="width: 210px;" class="ng-star-inserted">
+                            <col style="width: 176px;" class="ng-star-inserted k-sorted">
+                            <col style="width: 168px;" class="ng-star-inserted">
+                            <col style="width: 124px;" class="ng-star-inserted">
+                            <!----><!---->
+                        </colgroup>
+                        <tbody kendogridtablebody="" role="presentation">
+                            <!----><!----><!---->
+                            <tr kendogridlogicalrow="" class="k-master-row ng-star-inserted"
+                                data-kendo-grid-item-index="0" role="row" aria-rowindex="2">
+                                <!----><!----><!----><!---->
+                                <td kendogridcell="" kendogridlogicalcell="" role="gridcell"
+                                    class="k-touch-action-auto text-center ng-star-inserted"
+                                    data-kendo-grid-column-index="0" aria-selected="false" colspan="1"
+                                    aria-colindex="1">
+                                    <!----><label class="c-checkbox mb-0 o-5 ng-star-inserted">
+                                        <div kendotooltip="" position="right" tooltipclass="lic-tooltip" type="checkbox"
+                                            filter="p" class="d-inline-block">
+                                            <p class="cursor-pointer"
+                                                title="The ability to allow bulk approval and/or bulk rejection has not been enabled for this task.">
+                                                <span class="c-checkbox-box"><svg width="11px" height="8px"
+                                                        viewBox="0 0 11 8" version="1.1">
+                                                        <g stroke="none" stroke-width="1" fill="none"
+                                                            fill-rule="evenodd">
+                                                            <g transform="translate(-4.000000, -6.000000)"
+                                                                fill="#24BFC7" class="set-s-fill">
+                                                                <path
+                                                                    d="M14.5983382,7.88310204 L8.88432353,13.6497959 C8.46114706,14.076898 7.77477941,14.076898 7.35127941,13.6497959 L4.40166176,10.6724898 C3.97832353,10.2453878 3.97832353,9.55265306 4.40166176,9.12538776 C4.825,8.69812245 5.51136765,8.69812245 5.93454412,9.12522449 L8.11804412,11.3289796 L13.0652941,6.33583673 C13.4886324,5.90857143 14.175,5.90889796 14.5981765,6.33583673 C15.0215147,6.76310204 15.0215147,7.45567347 14.5983382,7.88310204 Z">
+                                                                </path>
+                                                            </g>
+                                                        </g>
+                                                    </svg></span>
+                                            </p>
+                                        </div>
+                                    </label><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                                </td>
 
+</tbody>
+</table>
+</div>
+</div>
+</kendo-grid-list>
