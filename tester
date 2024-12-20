@@ -1,23 +1,16 @@
 html inspect element:
 
-const { chromium } = require('playwright');
+const { test, expect } = require('@playwright/test');
 
-(async () => {
-  const browser = await chromium.launch({ headless: false });
-  
-  const context = await browser.newContext({
-    bypassCSP: true, // Optionally bypass CSP if needed
-  });
+test('select first row and click div in second column', async ({ page }) => {
+  // Go to the page where your table is located
+  await page.goto('your-url-here');
 
-  // Disable cache by intercepting requests
-  await context.setCacheEnabled(false);
+  // Locate the first row and the div inside the second column
+  const firstRowDivInSecondColumn = await page.locator('table tbody tr:first-child td:nth-child(2) div.lt-image');
 
-  const page = await context.newPage();
-  
-  await page.goto('https://example.com');
+  // Click the div element inside the second column of the first row
+  await firstRowDivInSecondColumn.click();
 
-  // Perform your tests...
-
-  await browser.close();
-})();
-
+  // Add further test steps or assertions here as needed
+});
