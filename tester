@@ -1,3 +1,23 @@
 html inspect element:
 
+const { chromium } = require('playwright');
+
+(async () => {
+  const browser = await chromium.launch({ headless: false });
+  
+  const context = await browser.newContext({
+    bypassCSP: true, // Optionally bypass CSP if needed
+  });
+
+  // Disable cache by intercepting requests
+  await context.setCacheEnabled(false);
+
+  const page = await context.newPage();
+  
+  await page.goto('https://example.com');
+
+  // Perform your tests...
+
+  await browser.close();
+})();
 
