@@ -3,20 +3,21 @@ html inspect
 
 const { test, expect } = require('@playwright/test');
 
-test('Test in incognito mode', async ({ browser }) => {
+test('Test with manually cleared state', async ({ browser }) => {
   // Create a new isolated context (incognito-like)
-  const context = await browser.newContext({
-    storageState: null, // Optional: Clear any stored session/cookies
-    bypassCSP: true,    // Optional: If you want to disable Content Security Policy
-  });
+  const context = await browser.newContext();
 
-  // Open a page within the incognito context
+  // Clear cookies and localStorage manually if needed
+  await context.clearCookies();
+  await context.clearLocalStorage();
+
+  // Open a page within the new context
   const page = await context.newPage();
 
-  // Visit your URL
+  // Visit the URL
   await page.goto('https://example.com');
 
-  // Add any interactions here
+  // Perform any interactions
   await expect(page).toHaveTitle('Example Domain');
 
   // Close the context (and page) after the test
