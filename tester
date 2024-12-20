@@ -1,16 +1,24 @@
-html inspect element:
+html inspect 
+
 
 const { test, expect } = require('@playwright/test');
 
-test('select first row and click div in second column', async ({ page }) => {
-  // Go to the page where your table is located
-  await page.goto('your-url-here');
+test('Test in incognito mode', async ({ browser }) => {
+  // Create a new isolated context (incognito-like)
+  const context = await browser.newContext({
+    storageState: null, // Optional: Clear any stored session/cookies
+    bypassCSP: true,    // Optional: If you want to disable Content Security Policy
+  });
 
-  // Locate the first row and the div inside the second column
-  const firstRowDivInSecondColumn = await page.locator('table tbody tr:first-child td:nth-child(2) div.lt-image');
+  // Open a page within the incognito context
+  const page = await context.newPage();
 
-  // Click the div element inside the second column of the first row
-  await firstRowDivInSecondColumn.click();
+  // Visit your URL
+  await page.goto('https://example.com');
 
-  // Add further test steps or assertions here as needed
+  // Add any interactions here
+  await expect(page).toHaveTitle('Example Domain');
+
+  // Close the context (and page) after the test
+  await context.close();
 });
