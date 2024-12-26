@@ -1,25 +1,15 @@
 html inspect 
 
+import { test, expect, chromium } from '@playwright/test';
 
-const { test, expect } = require('@playwright/test');
+test('incognito test', async () => {
+  const browser = await chromium.launch(); // Launch browser
+  const context = await browser.newContext(); // Create a new incognito context
+  const page = await context.newPage(); // Open a new page in the incognito context
 
-test('Test with manually cleared state', async ({ browser }) => {
-  // Create a new isolated context (incognito-like)
-  const context = await browser.newContext();
-
-  // Clear cookies and localStorage manually if needed
-  await context.clearCookies();
-  await context.clearLocalStorage();
-
-  // Open a page within the new context
-  const page = await context.newPage();
-
-  // Visit the URL
   await page.goto('https://example.com');
+  expect(await page.title()).toBe('Example Domain');
 
-  // Perform any interactions
-  await expect(page).toHaveTitle('Example Domain');
-
-  // Close the context (and page) after the test
-  await context.close();
+  await browser.close();
 });
+
