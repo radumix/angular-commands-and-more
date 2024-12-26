@@ -2,14 +2,28 @@ html inspect
 
 import { test, expect, chromium } from '@playwright/test';
 
-test('incognito test', async () => {
-  const browser = await chromium.launch(); // Launch browser
-  const context = await browser.newContext(); // Create a new incognito context
-  const page = await context.newPage(); // Open a new page in the incognito context
-
+test('check no cookies in incognito', async () => {
+  const browser = await chromium.launch();
+  
+  // Create a new context, simulating incognito
+  const context = await browser.newContext();
+  
+  // Open a new page
+  const page = await context.newPage();
+  
+  // Navigate to a website
   await page.goto('https://example.com');
-  expect(await page.title()).toBe('Example Domain');
 
+  // Check if any cookies exist (should be empty in incognito)
+  const cookies = await context.cookies();
+  expect(cookies.length).toBe(0); // Should be 0 in incognito mode
+
+  // Check local storage (should be empty as well)
+  const localStorageData = await page.evaluate(() => localStorage.length);
+  expect(localStorageData).toBe(0); // Should be 0 in incognito mode
+  
   await browser.close();
 });
+
+
 
