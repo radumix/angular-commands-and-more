@@ -1,45 +1,38 @@
 html inspect 
 
-
-  
 import { test, expect, chromium } from '@playwright/test';
 
-test('Ensure no autofill or saved passwords', async () => {
-  // Launch the browser with arguments to disable autofill and password saving
-  const browser = await chromium.launch({
-    headless: false,  // Set to true for headless mode
-    args: [
-      '--disable-save-password',  // Disable saving passwords
-      '--disable-autofill',        // Disable autofill
-      '--incognito',               // Use incognito mode to prevent data sharing
-    ],
-  });
+let browser;
+let context;
+let page;
 
-  // Create a fresh, isolated context for incognito-like behavior
-  const context = await browser.newContext();
+test.beforeAll(async () => {
+  // Launch the browser
+  browser = await chromium.launch({ headless: false }); // Set to true for headless mode
+  context = await browser.newContext();
+  page = await context.newPage();
+});
 
-  // Open a new page in this isolated context
-  const page = await context.newPage();
+test('Test 1: Perform Actions', async () => {
+  // Perform test actions
+  await page.goto('https://example.com');
+  await expect(page).toHaveTitle('Example Domain');
   
-  // Navigate to the app or website
-  await page.goto('https://example.com'); // Replace with your app URL
+  // Add other test actions as needed
+});
+
+test('Test 2: Perform Another Action', async () => {
+  // Perform another test action
+  await page.goto('https://example.com/another-page');
+  await expect(page).toHaveTitle('Another Example');
   
-  // Check if autofill is disabled: ensure no username or password is auto-filled
-  const usernameInput = await page.$('input[name="username"]'); // Adjust the selector as needed
-  const passwordInput = await page.$('input[name="password"]'); // Adjust the selector as needed
+  // Add other test actions as needed
+});
 
-  const usernameValue = await usernameInput?.inputValue();
-  const passwordValue = await passwordInput?.inputValue();
-
-  // Assert that the username and password fields are empty (i.e., not auto-filled)
-  expect(usernameValue).toBe('');
-  expect(passwordValue).toBe('');
-
-  // Close the browser after the test
+test.afterAll(async () => {
+  // Close the browser after all tests are done
   await browser.close();
 });
 
-
-
-
+  
 
