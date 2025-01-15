@@ -1,42 +1,38 @@
 html inspect 
 
 
-async function waitForElement(xpath, timeout = 5000) {
-    const startTime = Date.now();
-    
-    return new Promise((resolve, reject) => {
-        function checkElement() {
-            let element = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
-            
-            if (element) {
-                resolve(element);
-            } else if (Date.now() - startTime >= timeout) {
-                reject(new Error(`Element not found within ${timeout}ms`));
-            } else {
-                setTimeout(checkElement, 100); // Check again after 100ms
-            }
-        }
-        checkElement();
-    });
-}
-
-async function checkElements() {
+function findElement(xpath) {
     try {
-        // Try to find the primary element with wait
-        let element = await waitForElement("//primary_xpath_here");
-        console.log("Primary element found:", element);
-    } catch (error) {
-        console.log(error.message);
-        try {
-            // If primary not found, try fallback
-            let element = await waitForElement("//fallback_xpath_here");
-            console.log("Fallback element found:", element);
-        } catch (fallbackError) {
-            console.log(fallbackError.message);
-            // Handle case where neither element is found
+        let element = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+        if (element) {
+            return true;  // Return true if element is found
+        } else {
+            return false; // Return false if element is not found
         }
+    } catch (error) {
+        console.error("Error:", error.message);
+        return false;  // Return false in case of any errors, such as invalid XPath
     }
 }
 
-checkElements();
+function checkElements() {
+    // Try the primary XPath first
+    let isPrimaryFound = findElement('//*[@id="button_frm_element_18293"]');
+    
+    if (!isPrimaryFound) {
+        // If primary element is not found, try the fallback XPath
+        isPrimaryFound = findElement('//*[@class="secondary_button"]');
+    }
+    
+    if (isPrimaryFound) {
+        console.log("Element found.");
+        return true;  // Return true if any element is found
+    } else {
+        console.log("Both primary and fallback elements are missing.");
+        return false;  // Return false if no element is found
+    }
+}
 
+// Execute the function and get the result
+let result = checkElements();
+console.log(result);  // Logs true or false depending on the result
