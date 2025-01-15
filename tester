@@ -1,38 +1,76 @@
 html inspect 
 
 
-function findElement(xpath) {
-    try {
-        let element = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
-        if (element) {
-            return true;  // Return true if element is found
-        } else {
-            return false; // Return false if element is not found
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Duplicate Countries in Array</title>
+</head>
+<body>
+    <table id="myTable">
+        <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Ernst Handel</td>
+            <td>Roland Mendel</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Island Trading</td>
+            <td>Helen Bennett</td>
+            <td>UK</td>
+        </tr>
+        <tr>
+            <td>Laughing Bacchus Winecellars</td>
+            <td>Yoshi Tannamuri</td>
+            <td>Canada</td>
+        </tr>
+        <tr>
+            <td>Magazzini Alimentari Riuniti</td>
+            <td>Giovanni Rovelli</td>
+            <td>Italy</td>
+        </tr>
+    </table>
+
+    <button onclick="removeDuplicateCountries()">Remove Duplicate Countries from Array</button>
+
+    <script>
+        function removeDuplicateCountries() {
+            const table = document.getElementById("myTable");
+            const rows = table.getElementsByTagName('tr');
+            let countries = [];
+
+            // Loop through rows (starting from index 1 to skip header)
+            for (let i = 1; i < rows.length; i++) {
+                const countryCell = rows[i].cells[2]; // Country is in the 3rd column (index 2)
+                const countryValue = countryCell ? countryCell.innerText.trim() : "";
+
+                // Add country to the array if not already present
+                countries.push(countryValue);
+            }
+
+            // Remove duplicates using Set (this ensures the array contains only unique countries)
+            countries = [...new Set(countries)];
+
+            // Optionally, log the result to the console
+            console.log("Unique countries:", countries);
+            alert("Unique countries: " + countries.join(', '));
         }
-    } catch (error) {
-        console.error("Error:", error.message);
-        return false;  // Return false in case of any errors, such as invalid XPath
-    }
-}
-
-function checkElements() {
-    // Try the primary XPath first
-    let isPrimaryFound = findElement('//*[@id="button_frm_element_18293"]');
-    
-    if (!isPrimaryFound) {
-        // If primary element is not found, try the fallback XPath
-        isPrimaryFound = findElement('//*[@class="secondary_button"]');
-    }
-    
-    if (isPrimaryFound) {
-        console.log("Element found.");
-        return true;  // Return true if any element is found
-    } else {
-        console.log("Both primary and fallback elements are missing.");
-        return false;  // Return false if no element is found
-    }
-}
-
-// Execute the function and get the result
-let result = checkElements();
-console.log(result);  // Logs true or false depending on the result
+    </script>
+</body>
+</html>
