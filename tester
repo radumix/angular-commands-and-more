@@ -1,24 +1,84 @@
 html inspect 
 
-// Locate the table and check if it has any rows
-const table = await page.locator('table tbody');
+const { test, expect, chromium } = require('@playwright/test'); 
 
-// Check if the table contains at least one row
-const rowCount = await table.locator('tr').count();
+let key = 0;
+const docNum = ['CUSTNEW-0002519', 'CUSTNEW-0002518', 'CUSTUPD-0002618', 'CUSTNEW-0002517']; 
 
-// If there's at least one row, proceed with locating the div inside the second column of the first row
-if (rowCount > 0) {
-  const firstRowDivInSecondColumn = await page.locator('table tbody tr:first-child td:nth-child(2) div.lt-image');
+test("Test 1: Process Task", async () => {
+    const browser = await chromium.launch({
+        headless: false, // Set to true for headless mode
+        args: [
+            '--disable-save-password', // Disable saving passwords
+            '--disable-autofill', // Disable autofill
+            '--incognito', // Use incognito mode to prevent data sharing
+        ],
+    });
 
-  // Check if the div contains any content (e.g., text or image)
-  const isDivVisible = await firstRowDivInSecondColumn.isVisible();
+    const context = await browser.newContext();
+    const page = await context.newPage();
+    await page.goto('https://winshuttle-d.abbott.com/en/#/Development/tasks');
+  
+    // Login process
+    await page.locator('xpath=//*[@id="i0116"]').fill('mudar.dastam@abbott.com');
+    await expect(page.locator('xpath=//*[@id="idSIButton9"]')).toBeVisible({ timeout: 30000 });
+    await page.locator('xpath=//*[@id="idSIButton9"]').click();
 
-  // If the div is visible or contains a value, click it
-  if (isDivVisible) {
-    await firstRowDivInSecondColumn.click();
-  } else {
-    console.log('Div inside the second column is not visible or has no content.');
-  }
-} else {
-  console.log('The table has no rows.');
-}
+    await page.locator('xpath=//*[@id="0118"]').fill('Umar@April2017');
+    await expect(page.locator('xpath=//*[@id="idSIButton9"]')).toBeVisible({ timeout: 30000 });
+    await page.locator('xpath=//*[@id="idSIButton9"]').click();
+
+    // Task page
+    await page.locator('xpath=//*[@id="grd TaskList"]/div/div/div/table/thead/tr/th[5]/span[1]/kendo-grid-column-menu/a/span').click();
+    await expect(page.locator('xpath=//html/body/app-root/kendo-popup/div/kendo-grid-columnmenu-container/kendo-grid-columnmenu-filter/kendo-grid-columnmenu-item/div[1]')).toBeVisible({ timeout: 30000 });
+    await page.locator('xpath=//html/body/app-root/kendo-popup/div/kendo-grid-columnmenu-container/kendo-grid-columnmenu-filter/kendo-grid-columnmenu-item/div[1]').click();
+
+    // Loop through docNum and fill the input box
+    const interval = setInterval(async () => {
+        if (key >= docNum.length) {
+            clearInterval(interval); // Stop the loop once we have processed all the docNums
+            return;
+        }
+
+        // Fill the input box search1 with docNum
+        await page.locator('xpath=//html/body/app-root/kendo-popup/div/kendo-grid-columnmenu-container/kendo-grid-columnmenu-filter/kendo-grid-columnmenu-item/div[2]/kendo-grid-filter-menu-container/form/div/kendo-grid-string-filter-menu/kendo-grid-string-filter-menu-input[1]/kendo-grid-filter-menu-input-wrapper/input').fill(docNum[key]);
+
+        // Wait for the filter button to show and click it
+        await expect(page.locator('xpath=//html/body/app-root/kendo-popup/div/kendo-grid-columnmenu-container/kendo-grid-columnmenu-filter/kendo-grid-columnmenu-item/div[2]/kendo-grid-filter-menu-container/form/div/div/button[2]')).toBeVisible({ timeout: 30000 });
+        await page.locator('xpath=//html/body/app-root/kendo-popup/div/kendo-grid-columnmenu-container/kendo-grid-columnmenu-filter/kendo-grid-columnmenu-item/div[2]/kendo-grid-filter-menu-container/form/div/div/button[2]').click();
+
+        // Handle the popup window
+        await expect(page.locator('xpath=//html/body/modal-container/div/div/div[2]/div/button')).toBeVisible({ timeout: 30000 });
+        await page.locator('xpath=//html/body/modal-container/div/div/div[2]/div/button').click();
+
+        // Wait for the span to show and check the form title
+        await page.waitForSelector('xpath=//*[@id="header_frm_block_11"]/div', { timeout: 30000 });
+        const title = await page.locator('xpath=//*[@id="header_frm_block_11"]/div').textContent();
+        if (title.trim() === 'Customer Creation') {
+            console.log('Customer Creation');
+            await page.waitForTimeout(15000); // Adjusted waiting time
+            await expect(page.locator('xpath=//*[@id="button_frm_element_111106"]')).toBeVisible({ timeout: 30000 });
+            await page.locator('xpath=//*[@id="button_frm_element_111106"]').click();
+            await page.waitForTimeout(15000);
+            await expect(page.locator('xpath=//*[@id="button_frm_element_111107"]')).toBeVisible({ timeout: 30000 });
+            await page.locator('xpath=//*[@id="button_frm_element_111107"]').click();
+            await page.waitForTimeout(15000);
+            await expect(page.locator('xpath=//*[@id="button_frm_element_123337"]')).toBeVisible({ timeout: 30000 });
+            await page.locator('xpath=//*[@id="button_frm_element_123337"]').click();
+        } else {
+            console.log('Customer Update');
+            await page.waitForTimeout(15000);
+            await expect(page.locator('xpath=//*[@id="button_frm_element_18293"]')).toBeVisible({ timeout: 30000 });
+            await page.locator('xpath=//*[@id="button_frm_element_18293"]').click();
+            await page.waitForTimeout(15000);
+            await expect(page.locator('xpath=//*[@id="button_frm_element_128640"]')).toBeVisible({ timeout: 30000 });
+            await page.locator('xpath=//*[@id="button_frm_element_128640"]').click();
+            await page.waitForTimeout(15000);
+            await expect(page.locator('xpath=//*[@id="button_frm_element_1281103"]')).toBeVisible({ timeout: 30000 });
+            await page.locator('xpath=//*[@id="button_frm_element_1281103"]').click();
+        }
+
+        key++; // Increment the key to process the next docNum
+    }, 3000); // Adjust interval (e.g., 3000ms = 3 seconds) between each docNum processing
+});
+
