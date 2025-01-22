@@ -1,5 +1,11 @@
 html inspect 
 
+
+await page.locator('xpath=//*[@id="grdTaskList"]/div/kendo-grid-list/div/div[1]/table/tbody/tr[1]/td[2]').waitFor();
+const text = await page.locator('xpath=//*[@id="grdTaskList"]/div/kendo-grid-list/div/div[1]/table/tbody/tr[1]/td[2]').textContent();
+console.log(text);  // You can then use the text for further assertions or processing
+
+
 // Locate the value in the first column of the first row
 const firstColumnValue = await page.locator('table tbody tr:first-child td:nth-child(1)').textContent();
 
