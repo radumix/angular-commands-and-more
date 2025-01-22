@@ -1,19 +1,22 @@
 html inspect 
 
+// Wait for the "No Records Available" row to disappear
+await page.locator('table tbody tr.k-grid-norecords').waitFor({ state: 'detached', timeout: 5000 });
 
-await page.locator('xpath=//*[@id="grdTaskList"]/div/kendo-grid-list/div/div[1]/table/tbody/tr[1]/td[2]').waitFor();
-const text = await page.locator('xpath=//*[@id="grdTaskList"]/div/kendo-grid-list/div/div[1]/table/tbody/tr[1]/td[2]').textContent();
-console.log(text);  // You can then use the text for further assertions or processing
+// Now locate the first column of the first data row
+const firstColumnLocator = page.locator('table tbody tr:first-child td:nth-child(1)');
 
+// Wait for the first column to be visible and populated (ensure it's not empty)
+await firstColumnLocator.waitFor({ state: 'visible', timeout: 5000 });
 
-// Locate the value in the first column of the first row
-const firstColumnValue = await page.locator('table tbody tr:first-child td:nth-child(1)').textContent();
+// Retrieve the text content from the first column
+const firstColumnValue = await firstColumnLocator.textContent();
 
 // Log or use the value before clicking
 console.log('First column value in the first row:', firstColumnValue);
 
 // Locate the div inside the second column of the first row
-const firstRowDivInSecondColumn = await page.locator('table tbody tr:first-child td:nth-child(2) div.lt-image');
+const firstRowDivInSecondColumn = page.locator('table tbody tr:first-child td:nth-child(2) div.lt-image');
 
 // Perform the click action on the div in the second column
 await firstRowDivInSecondColumn.click();
