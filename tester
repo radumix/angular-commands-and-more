@@ -1,22 +1,13 @@
 html inspect 
 
-// Wait for the "No Records Available" row to disappear
-await page.locator('table tbody tr.k-grid-norecords').waitFor({ state: 'detached', timeout: 5000 });
+// Locate the row that contains the "No records available" message
+const noRecordsRowLocator = page.locator('table tbody tr.k-grid-norecords');
 
-// Now locate the first column of the first data row
-const firstColumnLocator = page.locator('table tbody tr:first-child td:nth-child(1)');
+// Wait for the "No records available" row to be visible
+await noRecordsRowLocator.waitFor({ state: 'visible', timeout: 5000 });
 
-// Wait for the first column to be visible and populated (ensure it's not empty)
-await firstColumnLocator.waitFor({ state: 'visible', timeout: 5000 });
+// Get the text content from the row
+const noRecordsText = await noRecordsRowLocator.textContent();
 
-// Retrieve the text content from the first column
-const firstColumnValue = await firstColumnLocator.textContent();
-
-// Log or use the value before clicking
-console.log('First column value in the first row:', firstColumnValue);
-
-// Locate the div inside the second column of the first row
-const firstRowDivInSecondColumn = page.locator('table tbody tr:first-child td:nth-child(2) div.lt-image');
-
-// Perform the click action on the div in the second column
-await firstRowDivInSecondColumn.click();
+// Log the "No records available" message to the console
+console.log('Message in the table:', noRecordsText.trim());
