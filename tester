@@ -3,11 +3,24 @@ html inspect
 // Locate the row that contains the "No records available" message
 const noRecordsRowLocator = page.locator('table tbody tr.k-grid-norecords');
 
-// Wait for the "No records available" row to be visible
-await noRecordsRowLocator.waitFor({ state: 'visible', timeout: 5000 });
+// Wait for the row to be visible or detached (in case it's removed when data loads)
+const noRecordsVisible = await noRecordsRowLocator.isVisible();
 
-// Get the text content from the row
-const noRecordsText = await noRecordsRowLocator.textContent();
-
-// Log the "No records available" message to the console
-console.log('Message in the table:', noRecordsText.trim());
+if (noRecordsVisible) {
+    // If the "No records available" message is visible, log it
+    const noRecordsText = await noRecordsRowLocator.textContent();
+    console.log('Message in the table:', noRecordsText.trim());
+} else {
+    // If the "No records available" message is NOT visible, check for data rows
+    const dataRowsLocator = page.locator('table tbody tr');
+    const rowCount = await dataRowsLocator.count();
+    
+    if (rowCount > 0) {
+        console.log(`Table has ${rowCount} data rows.`);
+        // Optionally, log or work with the first data row
+        const firstDataRowText = await dataRowsLocator.nth(0).textContent();
+        console.log('First data row text:', firstDataRowText.trim());
+    } else {
+        console.log('Table is empty, but no "No records available" message.');
+    }
+}
