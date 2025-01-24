@@ -1,26 +1,42 @@
 html inspect 
 
-// Locate the row that contains the "No records available" message
 const noRecordsRowLocator = page.locator('table tbody tr.k-grid-norecords');
+const dataRowsLocator = page.locator('table tbody tr');
+const retryInterval = 1000; // Retry interval in milliseconds (1 second)
+const maxRetries = 10; // Maximum number of retries
 
-// Wait for the row to be visible or detached (in case it's removed when data loads)
-const noRecordsVisible = await noRecordsRowLocator.isVisible();
+let retries = 0;
+let interval;
 
-if (noRecordsVisible) {
-    // If the "No records available" message is visible, log it
-    const noRecordsText = await noRecordsRowLocator.textContent();
-    console.log('Message in the table:', noRecordsText.trim());
-} else {
-    // If the "No records available" message is NOT visible, check for data rows
-    const dataRowsLocator = page.locator('table tbody tr');
-    const rowCount = await dataRowsLocator.count();
-    
-    if (rowCount > 0) {
-        console.log(`Table has ${rowCount} data rows.`);
-        // Optionally, log or work with the first data row
-        const firstDataRowText = await dataRowsLocator.nth(0).textContent();
-        console.log('First data row text:', firstDataRowText.trim());
+async function checkTableStatus() {
+    // Check if the "No records available" message is visible
+    const noRecordsVisible = await noRecordsRowLocator.isVisible();
+
+    if (noRecordsVisible) {
+        // If the "No records available" message is visible, log it and stop the interval
+        const noRecordsText = await noRecordsRowLocator.textContent();
+        console.log('Message in the table:', noRecordsText.trim());
+        clearInterval(interval); // Stop the interval
     } else {
-        console.log('Table is empty, but no "No records available" message.');
+        // If the message is not visible, check for data rows
+        const rowCount = await dataRowsLocator.count();
+
+        if (rowCount > 0) {
+            console.log(`Table has ${rowCount} data rows.`);
+            const firstDataRowText = await dataRowsLocator.nth(0).textContent();
+            console.log('First data row text:', firstDataRowText.trim());
+            clearInterval(interval); // Stop the interval once data is found
+        }
     }
+
+    // If max retries reached, stop the interval and log timeout message
+    if (retries >= maxRetries) {
+        console.log('Timed out waiting for records to load or the "No records available" message.');
+        clearInterval(interval); // Stop the interval
+    }
+    
+    retries++;
 }
+
+// Set an interval to check the table status every `retryInterval` milliseconds
+interval = setInterval(checkTableStatus, retryInterval);
