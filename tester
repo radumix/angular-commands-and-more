@@ -1,42 +1,39 @@
 html inspect 
 
-const noRecordsRowLocator = page.locator('table tbody tr.k-grid-norecords');
-const dataRowsLocator = page.locator('table tbody tr');
-const retryInterval = 1000; // Retry interval in milliseconds (1 second)
-const maxRetries = 10; // Maximum number of retries
+// Correcting the contentObject structure
+var contentObject = {
+    "2 Role's Assigned": ["Alfreds Futterkiste", "Maria Anders"],
+    "2 Role's Removed": ["Centro comercial Moctezuma", "Francisco Chang"]
+};
 
-let retries = 0;
-let interval;
+// Start building the HTML table
+var htmlTable = "<table border='1' style='border-collapse: collapse; width: 100%;'>";
+htmlTable += "<tr>";
 
-async function checkTableStatus() {
-    // Check if the "No records available" message is visible
-    const noRecordsVisible = await noRecordsRowLocator.isVisible();
+// Generate table headers
+for (var header in contentObject) {
+    htmlTable += "<th>" + header + "</th>";
+}
+htmlTable += "</tr>";
 
-    if (noRecordsVisible) {
-        // If the "No records available" message is visible, log it and stop the interval
-        const noRecordsText = await noRecordsRowLocator.textContent();
-        console.log('Message in the table:', noRecordsText.trim());
-        clearInterval(interval); // Stop the interval
-    } else {
-        // If the message is not visible, check for data rows
-        const rowCount = await dataRowsLocator.count();
+// Find the max number of rows
+var maxRows = Math.max(
+    contentObject["2 Role's Assigned"].length,
+    contentObject["2 Role's Removed"].length
+);
 
-        if (rowCount > 0) {
-            console.log(`Table has ${rowCount} data rows.`);
-            const firstDataRowText = await dataRowsLocator.nth(0).textContent();
-            console.log('First data row text:', firstDataRowText.trim());
-            clearInterval(interval); // Stop the interval once data is found
-        }
+// Generate table rows
+for (var i = 0; i < maxRows; i++) {
+    htmlTable += "<tr>";
+    for (var header in contentObject) {
+        var value = contentObject[header][i] || ""; // Handle missing values
+        htmlTable += "<td>" + value + "</td>";
     }
-
-    // If max retries reached, stop the interval and log timeout message
-    if (retries >= maxRetries) {
-        console.log('Timed out waiting for records to load or the "No records available" message.');
-        clearInterval(interval); // Stop the interval
-    }
-    
-    retries++;
+    htmlTable += "</tr>";
 }
 
-// Set an interval to check the table status every `retryInterval` milliseconds
-interval = setInterval(checkTableStatus, retryInterval);
+htmlTable += "</table>";
+
+// Set the HTML table into the form field
+$form.setValue('/my:myFields/my:emailContent', htmlTable);
+
