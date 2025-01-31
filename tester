@@ -1,39 +1,14 @@
 html inspect 
 
-// Correcting the contentObject structure
-var contentObject = {
-    "2 Role's Assigned": ["Alfreds Futterkiste", "Maria Anders"],
-    "2 Role's Removed": ["Centro comercial Moctezuma", "Francisco Chang"]
-};
+const arr = [1, 2, 2, 3, 4, 4];
 
-// Start building the HTML table
-var htmlTable = "<table border='1' style='border-collapse: collapse; width: 100%;'>";
-htmlTable += "<tr>";
+// Count the frequency of each element
+const frequency = arr.reduce((acc, value) => {
+  acc[value] = (acc[value] || 0) + 1;
+  return acc;
+}, {});
 
-// Generate table headers
-for (var header in contentObject) {
-    htmlTable += "<th>" + header + "</th>";
-}
-htmlTable += "</tr>";
+// Filter out elements that appear more than once
+const uniqueArr = arr.filter(value => frequency[value] === 1);
 
-// Find the max number of rows
-var maxRows = Math.max(
-    contentObject["2 Role's Assigned"].length,
-    contentObject["2 Role's Removed"].length
-);
-
-// Generate table rows
-for (var i = 0; i < maxRows; i++) {
-    htmlTable += "<tr>";
-    for (var header in contentObject) {
-        var value = contentObject[header][i] || ""; // Handle missing values
-        htmlTable += "<td>" + value + "</td>";
-    }
-    htmlTable += "</tr>";
-}
-
-htmlTable += "</table>";
-
-// Set the HTML table into the form field
-$form.setValue('/my:myFields/my:emailContent', htmlTable);
-
+console.log(uniqueArr); // Output: [1, 3]
