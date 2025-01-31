@@ -12,3 +12,28 @@ const frequency = arr.reduce((acc, value) => {
 const uniqueArr = arr.filter(value => frequency[value] === 1);
 
 console.log(uniqueArr); // Output: [1, 3]
+
+
+------------------------------
+
+
+
+// Corrected object format
+var contentObject = {
+    "New Role Assigned": ["Manager", "HR"],
+    "Removed Role": ["Liasson", "Driver", "Assistant"]
+};
+
+// Start building the formatted email content
+var htmlContent = "<div style='font-family: Arial, sans-serif; font-size: 14px; color: #333;'>";
+
+// Loop through the contentObject and format the roles
+for (var roleType in contentObject) {
+    htmlContent += "<p style='margin: 5px 0;'><strong>" + roleType + " " + contentObject[roleType].length + " - </strong>";
+    htmlContent += contentObject[roleType].join(", ") + ".</p>";
+}
+
+htmlContent += "</div>";
+
+// Set the formatted text into the form field
+$form.setValue('/my:myFields/my:emailContent', htmlContent);
