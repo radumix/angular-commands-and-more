@@ -37,3 +37,37 @@ htmlContent += "</div>";
 
 // Set the formatted text into the form field
 $form.setValue('/my:myFields/my:emailContent', htmlContent);
+
+===============
+
+const { chromium } = require('playwright');
+
+const argsString = process.argv[2]; // Get the first argument as a string
+const argsArray = argsString.split(','); // Split the string into an array
+
+console.log("Arguments passed:", argsArray);
+
+// Function to add a delay
+const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+(async () => {
+    const browser = await chromium.launch({ headless: true }); // Launch browser once
+
+    for (const [index, arg] of argsArray.entries()) {
+        console.log(`Processing: ${arg} (Index ${index})`);
+
+        const page = await browser.newPage();
+        await page.goto(`https://example.com/search?q=${arg}`); // Example: visiting a search page
+        console.log(`Title for ${arg}:`, await page.title());
+
+        await page.close(); // Close the page after use
+
+        // Wait for 6 minutes (360,000 ms) before the next loop iteration
+        console.log(`Waiting 6 minutes before processing the next item...`);
+        await delay(360000);
+    }
+
+    await browser.close(); // Close browser after the loop
+    console.log("All tasks completed.");
+})();
+
