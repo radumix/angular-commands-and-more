@@ -71,3 +71,18 @@ const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
     console.log("All tasks completed.");
 })();
 
+
+
+===========
+
+const element = await $(locator('//*[@id="button_frm_element_111106"]'));
+const isVisible = await element.isDisplayed();
+const isObstructed = await element.isElementPresent();
+
+if (!isVisible || isObstructed) {
+    throw new Error('Element is either not visible or obstructed by another element');
+}
+
+
+
+
