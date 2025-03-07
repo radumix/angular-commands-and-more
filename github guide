@@ -23,3 +23,7 @@ delete branch: git branch -d <branch-name>
 stage changes: git add -A
 commit message: git commit -m "commit message"
 push commit: git push <remote> <branch-name>
+undo commit -> type git log to display the commit id then copy commit id type: git revert paste commit id here
+stash -> type git stash push -m "name of stash"
+check stash -> git stash list
+to apply stash -> type git stash apply stash@{0} . zero is stash id following your stash message
